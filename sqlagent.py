@@ -1,64 +1,75 @@
-from langchain.chat_models import ChatOpenAI
-from langchain.sql_database import SQLDatabase
-from langchain.agents import create_sql_agent
-from langchain_community.agent_toolkits.sql.toolkit import SQLDatabaseToolkit
-from langchain.chat_models import ChatOpenAI
+#from langchain.chat_models import ChatOpenAI
+#from langchain.sql_database import SQLDatabase
+from langchain_community.utilities import SQLDatabase
+#from langchain.agents import create_sql_agent
+#from langchain_community.agent_toolkits.sql.toolkit import SQLDatabaseToolkit
+from langchain_community.agent_toolkits import SQLDatabaseToolkit
+#from langchain.chat_models import ChatOpenAI
+from langchain.chat_models import init_chat_model
 from langchain.prompts import PromptTemplate, ChatPromptTemplate, HumanMessagePromptTemplate
 from langchain_core.messages import HumanMessage, SystemMessage
+import os
+#from langchain.agents import create_agent
+from langchain_community.agent_toolkits.sql.base import create_sql_agent
+from dotenv import load_dotenv
+
 
 def ask_agent(query):
-    
+    load_dotenv()
+
+    llm = init_chat_model(
+        model="gpt-4o-mini",      
+        model_provider="openai",
+        temperature=0.3)
+
     db = SQLDatabase.from_uri("sqlite:///doctors.db")
 
-    toolkit = SQLDatabaseToolkit(db=db, llm=ChatOpenAI(temperature=0))
+    toolkit = SQLDatabaseToolkit(db=db, llm=llm)
 
-    agent = create_sql_agent(
-        llm=ChatOpenAI(temperature=0),
-        toolkit=toolkit,
-        verbose=True,
-        handle_parsing_errors=True 
+    tools = toolkit.get_tools()
+
+
+    system_prompt = """
+    You are an agent designed to interact with a SQL database.
+    Given an input question, create a syntactically correct {dialect} query to run,
+    then look at the results of the query and return the answer. Unless the user
+    specifies a specific number of examples they wish to obtain, always limit your
+    query to at most {top_k} results.
+
+    You can order the results by a relevant column to return the most interesting
+    examples in the database. Never query for all the columns from a specific table,
+    only ask for the relevant columns given the question.
+
+    You MUST double check your query before executing it. If you get an error while
+    executing a query, rewrite the query and try again.
+
+    DO NOT make any DML statements (INSERT, UPDATE, DELETE, DROP etc.) to the
+    database.
+
+    To start you should ALWAYS look at the tables in the database to see what you
+    can query. Do NOT skip this step.
+
+    Then you should query the schema of the most relevant tables.
+    """.format(
+        dialect=db.dialect,
+        top_k=5,
     )
 
-    #query = "is doctor Dr B. L. Avinash  available on 2025-10-15 at 1:00 PM?"
-    sql_result = agent.run(query)
-
-    reasoning_llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
-    prompt = f"""
-    You are a medical scheduling assistant that queries a database to answer questions about doctor availability.
-
-    - The database has two main tables:
-    1. doctor(doctor_id, name, specialization, qualification, experience, consultation_fee, location)
-    2. availability(id, doctor_id, date, available_slots)
-
-    - The availability table stores all appointment times for doctors, linked by doctor_id.
-
-    Given the query {query} :
-    the result for the question is in  {sql_result}
-    
-    Answer the question asked in the query:
-      When a question asks about:
-    - availability or appointment times → query the availability table (JOIN with doctor)
-    - doctor details (qualification, fee, etc.) → query the doctor table
-    - specific date or time → filter by availability.date and/or available_slots
-    - If the result is empty or None, respond:
-    - "Sorry, there are no available appointments for this doctor right now."
-
-Answer in one line if possible.
-    Always return the **next available date and time** for appointment-related questions.
-
-    General Instructions
-    - If the result provides a clear answer, respond with a concise factual response.
-    - If the question can be answered as Yes/No, respond simply with "Yes" or "No".
-    - Only include an explanation if it helps clarify how the result answers the question.
-    - Do not invent or assume data not present in the SQL result.
-    """
-
-    messages = [
-                SystemMessage(content="you are an expert in analyzing sql results analyse the sql results from the sql agent and answer the question asked in the query"),
-                HumanMessage(content=prompt)
-            ]
 
 
-    final_response = reasoning_llm.invoke(messages)
-    print(final_response.content.strip())
-    return final_response.content.strip()
+    agent = create_sql_agent(
+        llm=llm,
+        db=db,
+        verbose=True,
+        system_prompt=system_prompt
+    )
+
+    # Your question
+    question = "is dr pankaj available on 2025-10-15 at 1:00 PM?"
+
+    response = agent({"input": question})
+
+    # Print the final answer
+    print(response)
+
+    return response
