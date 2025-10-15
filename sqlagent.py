@@ -14,13 +14,13 @@ from langchain_community.agent_toolkits.sql.base import create_sql_agent
 from dotenv import load_dotenv
 
 
-def ask_agent(query):
+def ask_agent(question):
     load_dotenv()
 
     llm = init_chat_model(
         model="gpt-4o-mini",      
         model_provider="openai",
-        temperature=0.3)
+        temperature=0)
 
     db = SQLDatabase.from_uri("sqlite:///doctors.db")
 
@@ -32,9 +32,8 @@ def ask_agent(query):
     system_prompt = """
     You are an agent designed to interact with a SQL database.
     Given an input question, create a syntactically correct {dialect} query to run,
-    then look at the results of the query and return the answer. Unless the user
-    specifies a specific number of examples they wish to obtain, always limit your
-    query to at most {top_k} results.
+    then look at the results of the query and return the answer.query all relevant rows without limiting the number of results.
+    IMPORTANT : DO NOT LIMIT YOUR QUERY TO RETRUN TOP 3 ROWS ,QUERY SHOULD RETRUN ALL THE ROWS
 
     You can order the results by a relevant column to return the most interesting
     examples in the database. Never query for all the columns from a specific table,
@@ -50,11 +49,13 @@ def ask_agent(query):
     can query. Do NOT skip this step.
 
     Then you should query the schema of the most relevant tables.
-    """.format(
-        dialect=db.dialect,
-        top_k=5,
-    )
+   
+    If the doctor does not exist, respond: "Doctor not found."
+    if you dont see the availability, respond: "Doctor not available."
+    Do not guess or pick similar doctor names.
 
+    """
+    
 
 
     agent = create_sql_agent(
@@ -65,7 +66,7 @@ def ask_agent(query):
     )
 
     # Your question
-    question = "is dr pankaj available on 2025-10-15 at 1:00 PM?"
+    #question = "is dr pankaj available on 2025-10-15 at 1:00 PM?"
 
     response = agent({"input": question})
 

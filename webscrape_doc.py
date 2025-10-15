@@ -61,9 +61,7 @@ def get_web_data(url):
 
     available_dates_dict = {}
 
-    # --------------------------
-    # Step 1: Collect available dates (ignore cloned)
-    # --------------------------
+    # Collect available dates
     today = datetime.date.today()
     dates = driver.find_elements(By.CSS_SELECTOR, "li.item.link-available")
 
@@ -78,25 +76,20 @@ def get_web_data(url):
         if available_span:
             available_dates.append((data_date, date_li))
 
-    # --------------------------
-    # Step 2: Remove duplicates by date
-    # --------------------------
+    # Remove duplicates by date
     unique_dates = {}
     for data_date, li_element in available_dates:
         if data_date not in unique_dates:
             unique_dates[data_date] = li_element
 
-    # --------------------------
-    # Step 3: Sort dates chronologically
-    # --------------------------
+    # Sort dates chronologically
     available_dates_sorted = sorted(
         unique_dates.items(),
         key=lambda x: datetime.datetime.strptime(x[0], "%Y-%m-%d").date()
     )
 
-    # --------------------------
-    # Step 4: Loop through all future dates
-    # --------------------------
+    # Loop through all future dates
+     
     for data_date, li_element in available_dates_sorted:
         date_obj = datetime.datetime.strptime(data_date, "%Y-%m-%d").date()
         if date_obj < today:
