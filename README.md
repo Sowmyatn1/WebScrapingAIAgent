@@ -1,4 +1,4 @@
-# 🧠 GenAI SQL Chatbot using LangChain, SQLite, and Streamlit
+# 🧠 GenAI SQL Chatbot using webscraping ,LangChain, SQLite, and Streamlit
 
 This project is an intelligent chatbot that connects to a **SQLite database** and answers natural language questions using **LangChain**, **LLMs**, and **SQL agents**.  
 It can reason over SQL query results to provide concise and accurate answers.
