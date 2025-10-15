@@ -1,0 +1,2036 @@
+<body class="chrome">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58XTS72"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- start main-wrapper section -->
+  <div class="main-wrapper">
+    <!-- start header section -->
+    <div class="navbar-default">
+      <!-- End Top Search -->
+      <div class="row bg-theme3 no-margin fixedHeader2">
+        <div class="container sm-nopadding nopadding">
+          <div class="align-items-center no-margin">
+            <div class="col-12 col-lg-12 padding-0px-left sm-padding-10px-left">
+              <div class="menu_area alt-font">
+                <nav class="navbar navbar-expand-lg navbar-light no-padding">
+                  <div class="navbar-header navbar-header-custom col-md-3 sm-width-60 margin-5px-right sm-padding-10px-top">
+                    <!-- Start Logo -->
+                    <a href="https://medicasapp.com/in/" class="navbar-brand logodefault sm-margin-35px-left"><img src="https://medicasapp.com/wp-content/themes/divi-child/img/logo2.png" alt="logo" width="180"></a>
+                    <!-- End Logo -->
+                  </div>
+                  <div class="navbar-toggler"></div>
+                   <!-- Menu Area -->
+                   <ul id="nav" class="navbar-nav nav-icons"><li id="menu-item-104615" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-104615"><a href="https://medicasapp.com/in/">Home</a></li>
+<li id="menu-item-106683" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-106683"><a href="https://medicasapp.com/in/consult-now/">consult now</a></li>
+<li id="menu-item-107546" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-107546"><a href="https://labs.medicasapp.com/in/">Book Lab Test</a></li>
+<li id="menu-item-106239" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-106239"><a href="https://labs.medicasapp.com/in/health-packages/">Health Packages</a></li>
+<li id="menu-item-190223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-190223"><a href="https://medicasapp.com/about-us/">About Us</a></li>
+<li id="menu-item-107739" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-107739 has-sub"><span class="submenu-button"></span><a>More</a>
+<ul class="sub-menu">
+	<li id="menu-item-106238" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-106238"><a href="/blogs/">Health Articles</a></li>
+	<li id="menu-item-196913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-196913"><a href="https://medicasapp.com/health-library/">Health Library</a></li>
+	<li id="menu-item-190225" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-190225"><a href="/health-calculators/">Health Calculators</a></li>
+</ul>
+</li>
+<li id="menu-item-106492" class="helpModalPopup menu-item menu-item-type-custom menu-item-object-custom menu-item-106492"><a>Help</a></li>
+</ul> 
+                                  										<a href="https://web.medicasapp.com/in/signup" class="new-btn text-white margin-10px-left sm-margin-0px-left ml-auto">Login/Signup</a>
+                                    <!-- End Menu Area -->
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div></div>
+      
+      <div class="floating-box sm-display-none">
+              Get App
+              <table style="width: 100%; text-align: center;">
+                 <tbody><tr> <td height="30"><a href="https://apple.co/3nLqENU" target="_blank" title="App Store"><img src="https://medicasapp.com/wp-content/themes/divi-child/img/appstore-logo.png" alt="Location" width="20"></a></td></tr>
+                 <tr> <td height="30"><a href="https://bit.ly/3w7zsle" target="_blank" title="Play Store"><img src="https://medicasapp.com/wp-content/themes/divi-child/img/playstore-logo.png" alt="Location" width="20"></a></td></tr>
+              </tbody></table>   
+            </div>
+
+          <div class="floating-box2 display-none sm-display-block ">
+   
+    <table style="width: 100%; text-align: center;">
+        <tbody><tr>
+        
+          <td width="30" height="30"><a href="https://apple.co/3nLqENU" target="_blank" title="App Store"><img src="https://medicasapp.com/wp-content/themes/divi-child/img/appstore-logo.png" alt="Location" width="20"></a></td> 
+         <td width="30" height="30"><a href="https://bit.ly/3w7zsle" target="_blank" title="Play Store"><img src="https://medicasapp.com/wp-content/themes/divi-child/img/playstore-logo.png" alt="Location" width="20"></a></td></tr>
+    </tbody></table>   
+  </div>  
+      <script>
+jQuery(document).ready(function ($) {
+    $('#desktop_doctors_serach_speclity').on('keyup', function (e) {
+        var query = $(this).val().trim();
+        var city_name = '';
+        if (query.length >= 3) {
+            $.ajax({
+                type: 'POST',
+                url: 'https://medicasapp.com/wp-admin/admin-ajax.php',
+                data: {
+                    action: 'ajax_search_home',
+                    query: query,
+                    language: 'in',
+					city_name: city_name
+                },
+                beforeSend: function () {
+                    $('#search-results').css({ display: "block" }).html('<p>Loading...</p>');
+                },
+                success: function (response) {
+                    $('#search-results').html(response); // Display search results
+                    $('#searchIconClose').addClass('fa fa-times-circle float-right font-size16 main-color search-close');
+                },
+                error: function (xhr, status, error) {
+                    console.error(xhr.responseText);
+                    $('#search-results').css({ display: "none" }).empty();
+                }
+            });
+        } else {
+            $('#search-results').css({ display: "none" }).empty();
+            $('#searchIconClose').removeClass('fa fa-times-circle float-right font-size16 main-color search-close');
+        }
+    });
+});
+</script>
+
+
+<script>
+    const currency = "₹";
+</script><!-- start main-wrapper section -->
+<div class="main-wrapper">
+
+  <!-- Start breadcrumb section -->
+  <div class="page-title-section margin-50px-top">
+    <div class="container">
+      <div class="row no-margin">
+        <div class="col-md-12 margin-10px-top padding-15px-top padding-0px-left sm-display-none">
+          <ul>
+            <li><a href="https://medicasapp.com/in/">Home</a></li>
+<li class="font-weight-600">
+<a href="https://medicasapp.com/in/doctors-in-bangalore/">
+        Doctors in Bangalore    </a>
+</li>
+<li class="font-weight-600">
+<a href="https://medicasapp.com/in/doctors-in-bangalore/general-practitioner/">
+       General Practitioner    </a>
+</li>
+            <li class="secondary-color font-weight-600"> Dr B. L. Avinash</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end breadcrumb section -->
+
+
+  <!--End mobile filter-->
+
+  <div class="container margin-20px-top">
+
+    <h1 class="font-size20 text-center display-none">Consult <span class="font-weight-700">Dr B. L. Avinash</span> Online General Practitioner </h1>
+
+    <div class="row">
+
+     <div class="col-md-12 sm-no-padding">
+
+        <div class="margin-30px-bottom sm-margin-0px-bottom sm-margin-0px-top">
+
+         <div class="border float-left width-100 padding-15px-bottom margin-20px-bottom sm-no-border sm-bg-blue sm-margin-10px-bottom sm-padding-5px-bottom">
+
+            <a href="javascript:void(0)" title="Dr B. L. Avinash" class="product-block width-15 xs-width-35 float-left position-relative text-center margin-15px-top sm-margin-15px-top">
+    <img alt="Dr B. L. Avinash" src="https://medicasapp.com/wp-content/uploads/2025/09/Dr.20BL20Avinash_Mon20Aug200720202320083A243A4220GMT2B00002028Coordinated20Universal20Time29.jpg" class="width-100px sm-width-80px margin-lr-auto margin-10px-bottom sm-margin-5px-bottom rounded-circle height-100px sm-height-80px">
+                <br>
+              <span class="bg-theme text-white padding-5px-tb padding-15px-lr border-radius-5 font-weight-500 sm-padding-5px-lr">                                	
+                	₹ 300.00                </span>
+            </a>
+            <div class="float-left width-55 xs-width-65 padding-20px-all sm-padding-5px-lr sm-padding-15px-top text-black">
+              <div class="text-left">
+                <h2 class="font-size18 sm-font-size14 margin-5px-bottom font-weight-700"> Dr B. L. Avinash <span class="padding-5px-left"> <img src="https://medicasapp.com/wp-content/themes/divi-child/img/tested.svg" alt="tested" width="20" class="vertical-align-middle"></span> </h2>
+                <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500 margin-0px-bottom">General Practitioner</p>
+                <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500 margin-0px-bottom">MBBS, MD (General Medicine)</p>
+                <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500 margin-0px-bottom">9yr
+                  experience <img src="https://medicasapp.com/wp-content/themes/divi-child/img/map.svg" alt="map" width="15" class="vertical-align-middle"> Bangalore</p>
+                    <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500 margin-0px-bottom">
+        <span>
+            <img src="https://medicasapp.com/wp-content/themes/divi-child/img/comments.svg" alt="comments" width="15" class="vertical-align-middle">
+        </span>
+        English, Hindi, Telugu    </p>
+
+              </div>
+            </div>
+            <div class="float-right width-20 xs-width-100 padding-10px-all sm-padding-10px-tb sm-padding-20px-lr margin-50px-top sm-margin-5px-top sm-display-none">
+              <!--<a href="#"
+                class="clinic-btn  sm-font-size15 font-size14 sm-padding-15px-lr text-center sm-display-block sm-width-45 width-45 float-left"><span>
+                  Clinic Visit</span></a>---> 
+              <a href="javascript:void(0);" title="Book Online" data-target="#bottomPopup" data-id="1270" physicianspecialityid="693" country="in" specility="General Practitioner" class="book_online new-btn2 sm-font-size15 font-size14 sm-padding-15px-lr text-center sm-width-95 width-90 float-left margin-10px-left">
+            <span>Book Online</span> 
+        </a>
+            </div>
+          </div>
+          <!--Start time-slots Section for desktop -->
+    <div class="width-75 sm-width-90 margin-auto time_slot_html desktop-single1270 doctor_id1270">
+    <div class="test-desktop"></div>
+    		
+    <!-- Start Calendar Dates Cards -->
+    <div class="time-slots-container padding-20px-top clearfix sm-padding-0px-top">
+        <h5 class="font-size18 margin-40px-left font-weight-700 margin-5px-bottom sm-margin-5px-left">Select Date</h5>
+        <div class="col-12 margin-lr-auto width-90">
+            <ul class="owl-carousel owl-theme time-slots2 owl-loaded owl-drag" data-doctor-id="1270" data-physician-speciality-id="693" data-booking-slot-date="2025-10-14" data-duration="25" data-country="in">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                            <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-730px, 0px, 0px); transition: all; width: 2738px;"><div class="owl-item cloned" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-17" data-timezone="Asia/Kolkata">
+                        <span>17 Oct</span> 
+                        <span>Fri</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item cloned" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-18" data-timezone="Asia/Kolkata">
+                        <span>18 Oct</span> 
+                        <span>Sat</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item cloned" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-19" data-timezone="Asia/Kolkata">
+                        <span>19 Oct</span> 
+                        <span>Sun</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item cloned" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-20" data-timezone="Asia/Kolkata">
+                        <span>20 Oct</span> 
+                        <span>Mon</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item active" style="width: 172.512px; margin-right: 10px;"><li class="item link-available active" data-date="2025-10-14" data-timezone="Asia/Kolkata">
+                        <span>14 Oct</span> 
+                        <span>Tue</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item active" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-15" data-timezone="Asia/Kolkata">
+                        <span>15 Oct</span> 
+                        <span>Wed</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item active" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-16" data-timezone="Asia/Kolkata">
+                        <span>16 Oct</span> 
+                        <span>Thu</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item active" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-17" data-timezone="Asia/Kolkata">
+                        <span>17 Oct</span> 
+                        <span>Fri</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-18" data-timezone="Asia/Kolkata">
+                        <span>18 Oct</span> 
+                        <span>Sat</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-19" data-timezone="Asia/Kolkata">
+                        <span>19 Oct</span> 
+                        <span>Sun</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-20" data-timezone="Asia/Kolkata">
+                        <span>20 Oct</span> 
+                        <span>Mon</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item cloned" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-14" data-timezone="Asia/Kolkata">
+                        <span>14 Oct</span> 
+                        <span>Tue</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item cloned" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-15" data-timezone="Asia/Kolkata">
+                        <span>15 Oct</span> 
+                        <span>Wed</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item cloned" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-16" data-timezone="Asia/Kolkata">
+                        <span>16 Oct</span> 
+                        <span>Thu</span>
+                        <span class="available">Available</span>
+                    </li></div><div class="owl-item cloned" style="width: 172.512px; margin-right: 10px;"><li class="item link-available" data-date="2025-10-17" data-timezone="Asia/Kolkata">
+                        <span>17 Oct</span> 
+                        <span>Fri</span>
+                        <span class="available">Available</span>
+                    </li></div></div></div><div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fa fa-chevron-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="fa fa-chevron-right"></i></button></div><div class="owl-dots disabled"></div></ul>
+        </div>
+    </div>
+    <input type="hidden" id="businessHours" value="[{&quot;PhysicianBusinessHoursId&quot;:7135,&quot;PhysicianId&quot;:1270,&quot;Day&quot;:&quot;MON&quot;,&quot;Timezone&quot;:&quot;Asia\/Kolkata&quot;,&quot;Morning&quot;:&quot;11:00 AM-12:00 PM&quot;,&quot;Afternoon&quot;:&quot;01:00 PM-03:00 PM&quot;,&quot;Evening&quot;:&quot;04:00 PM-06:00 PM&quot;,&quot;Type&quot;:&quot;Fixed&quot;},{&quot;PhysicianBusinessHoursId&quot;:7136,&quot;PhysicianId&quot;:1270,&quot;Day&quot;:&quot;TUE&quot;,&quot;Timezone&quot;:&quot;Asia\/Kolkata&quot;,&quot;Morning&quot;:&quot;11:00 AM-12:00 PM&quot;,&quot;Afternoon&quot;:&quot;01:00 PM-03:00 PM&quot;,&quot;Evening&quot;:&quot;04:00 PM-06:00 PM&quot;,&quot;Type&quot;:&quot;Fixed&quot;},{&quot;PhysicianBusinessHoursId&quot;:7137,&quot;PhysicianId&quot;:1270,&quot;Day&quot;:&quot;WED&quot;,&quot;Timezone&quot;:&quot;Asia\/Kolkata&quot;,&quot;Morning&quot;:&quot;11:00 AM-12:00 PM&quot;,&quot;Afternoon&quot;:&quot;01:00 PM-03:00 PM&quot;,&quot;Evening&quot;:&quot;04:00 PM-06:00 PM&quot;,&quot;Type&quot;:&quot;Fixed&quot;},{&quot;PhysicianBusinessHoursId&quot;:7138,&quot;PhysicianId&quot;:1270,&quot;Day&quot;:&quot;THU&quot;,&quot;Timezone&quot;:&quot;Asia\/Kolkata&quot;,&quot;Morning&quot;:&quot;11:00 AM-12:00 PM&quot;,&quot;Afternoon&quot;:&quot;01:00 PM-03:00 PM&quot;,&quot;Evening&quot;:&quot;04:00 PM-06:00 PM&quot;,&quot;Type&quot;:&quot;Fixed&quot;},{&quot;PhysicianBusinessHoursId&quot;:7139,&quot;PhysicianId&quot;:1270,&quot;Day&quot;:&quot;FRI&quot;,&quot;Timezone&quot;:&quot;Asia\/Kolkata&quot;,&quot;Morning&quot;:&quot;11:00 AM-12:00 PM&quot;,&quot;Afternoon&quot;:&quot;01:00 PM-03:00 PM&quot;,&quot;Evening&quot;:&quot;04:00 PM-06:00 PM&quot;,&quot;Type&quot;:&quot;Fixed&quot;},{&quot;PhysicianBusinessHoursId&quot;:7140,&quot;PhysicianId&quot;:1270,&quot;Day&quot;:&quot;SAT&quot;,&quot;Timezone&quot;:&quot;Asia\/Kolkata&quot;,&quot;Morning&quot;:&quot;11:00 AM-12:00 PM&quot;,&quot;Afternoon&quot;:&quot;01:00 PM-03:00 PM&quot;,&quot;Evening&quot;:&quot;04:00 PM-06:00 PM&quot;,&quot;Type&quot;:&quot;Fixed&quot;},{&quot;PhysicianBusinessHoursId&quot;:7141,&quot;PhysicianId&quot;:1270,&quot;Day&quot;:&quot;SUN&quot;,&quot;Timezone&quot;:&quot;Asia\/Kolkata&quot;,&quot;Morning&quot;:&quot;11:00 AM-12:00 PM&quot;,&quot;Afternoon&quot;:&quot;01:00 PM-03:00 PM&quot;,&quot;Evening&quot;:&quot;04:00 PM-06:00 PM&quot;,&quot;Type&quot;:&quot;Fixed&quot;}]">
+    <!-- End Calendar Dates Cards -->
+        <!-- Start Slots Navigation -->
+    <div class="slots-nav">
+        <h5 class="font-size18 margin-40px-left font-weight-700 margin-5px-bottom margin-30px-top clearfix sm-margin-0px-top sm-margin-5px-left sm-margin-15px-bottom">Select Time</h5>
+        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                    <a title="Slots" class="nav-link  active" data-toggle="pill" href="#evening">
+                        Evening                    </a>
+                </li>
+                    </ul>
+
+        <div class="tab-content margin-30px-left sm-margin-0px-left">
+                            <div class="tab-pane container active time-slot margin-20px-bottom" style="overflow-y: scroll; height: 150px;" id="evening">
+                    <ul class="clearfix">
+                        <p>No Evening slots available.</p>                    </ul>
+                </div>
+                    </div>
+    </div>
+    <!-- End Slots Navigation -->
+    </div>
+    <!--End time-slots Section for desktop -->
+
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+  </div>
+  
+<script>
+  // Assign PHP value to a JavaScript variable
+   var duration = "25";
+
+  // Wait for jQuery to be ready
+  $(document).ready(function () {
+    setTimeout(function () {
+      var $bookButton = $('.book_online');
+      if ($bookButton.length) {
+        //console.log('Book Online button clicked');
+       // console.log('Duration:', duration); // ✅ Use it here
+        $bookButton.trigger('click'); 
+      } else {
+        //console.log('Book Online button not found');
+        $("#loader").hide();
+      }
+    }, 100); 
+  });
+</script>
+
+
+ <!-- Start About the doctor -->
+ <div class="container about-doctor clearfix nopadding sm-padding-15px-lr">
+ 
+<h2 class="font-size20 sm-font-size16 main-color">About the doctor</h2>
+    <!-- Tab panes -->
+     
+	 
+        <!-- About Doctor Tab -->
+		<div class="more-less-toggle">
+  <input type="checkbox" id="toggle1">
+        <div class="more-content container tab-pane active" role="tabpanel" aria-labelledby="aboutdoctor-tab"> 
+             <h2 class="secondary-color font-size16 sm-font-size16 font-weight-700">Profile Description</h2>
+<p></p><p>Dr. B.L. Avinash is a dedicated and compassionate medical professional with a profound passion for pediatric care. He has a diverse background, having handled a wide range of cases, from critically ill patients to outpatient scenarios. With extensive experience in managing COVID-19 patients in both ICU and ward settings, Dr. Avinash has demonstrated exceptional expertise and resilience during challenging times.</p>
+<p>Academic excellence has been a hallmark of Dr. Avinash’s career. He completed his MBBS from Vydehi Institute of Medical Sciences and went on to pursue a Postgraduate cum Tutor role at MVJ Medical College and Research Institute. During his postgraduate tenure, he actively contributed to the development of undergraduate medical, paramedical, and nursing students through theory and practical classes.</p>
+<p>Dr. Avinash’s commitment to advancing medical knowledge is evident through his involvement in various research projects. His contributions to clinical research and clinical trials, particularly in the field of dengue fever and concurrent infections, have earned him international recognition with published papers in indexed journals. Dr. Avinash’s paper presentations at state, national, and international conferences have further enriched the medical community’s understanding of critical health issues.</p>
+<p>In addition to his academic pursuits, Dr. Avinash has been actively involved in patient care, specializing in the Department of Medicine. He has excelled in handling emergencies, both inpatient and outpatient settings, and has displayed a sound understanding of medical terminology and the usage of medical equipment.</p>
+<p>Dr. Avinash’s dedication to enhancing patient care goes beyond clinical practice. He has collaborated with department heads to ensure the continuous improvement of healthcare delivery systems, aiming to deliver the highest quality patient care.</p>
+<p>Recognized for his professional achievements, Dr. Avinash has received accolades for his contributions to medical conferences, including presenting papers at APICON and KAPICON conferences.</p>
+<p>Through his diverse experiences, Dr. B.L. Avinash has demonstrated an unwavering commitment to serving the medical community and delivering the best possible care to children. With a drive for continuous learning and growth, he looks forward to his senior residency as an opportunity to acquire new skills and knowledge, further elevating his career in pediatric medicine.</p>
+<p>Senior Resident, Department of Medical Sciences (2020-2021)<br>
+Assistant Professor, MVJ Medical College and Research Hospital (2021-22)<br>
+Consultant, Apollo Clinic Department of Medicine (2022)<br>
+Consultant at Even Healthcare (Present)<br>
+Director of Sri Guru Krupa Clinic (Present)<br>
+Visiting Doctor at Apollo (Present)<br>
+Visitng Doctor at Bangalore Kidney Care Centre, Veena Hosital, Aathmeya Clinic (Present).</p>
+<p></p>
+
+<h2 class="secondary-color font-size16 sm-font-size16 font-weight-700">Qualifications</h2>
+<p></p><p>MBBS, MD (General Medicine)</p>
+<p></p>
+
+
+<h2 class="secondary-color font-size16 sm-font-size16 font-weight-700">Awards and Recognitions</h2>
+<ul class="width-100 float-left">
+    <p>1)Kamath V, Ganguly S, Avinash BL, Vinodh V.<br>
+Secondary hypokalemic periodic paralysis: A study of a case series. APIK J Int Med 2019;7:74-9.<br>
+2) Kamath V, Ganguly S, Avinash BL.<br>
+A comparative study of concurrent infections of rickettsial infection, malaria, typhoid, and chikungunya with dengue. APIK J Int Med 2019;7:120-6.<br>
+3)Avinash BL, Vasantha Kamath<br>
+An interesting case of hyperhomocysteinemia presenting as acute myocardial infarction and cerebral venous thrombosis. APIK J Int Med 2021;9:116-9.</p>
+</ul>
+
+<h2 class="secondary-color font-size16 sm-font-size16 font-weight-700">Research &amp; Publications</h2>
+<ul class="width-100 float-left">
+    <p>1)Kamath V, Ganguly S, Avinash BL, Vinodh V.<br>
+Secondary hypokalemic periodic paralysis: A study of a case series. APIK J Int Med 2019;7:74-9.<br>
+2) Kamath V, Ganguly S, Avinash BL.<br>
+A comparative study of concurrent infections of rickettsial infection, malaria, typhoid, and chikungunya with dengue. APIK J Int Med 2019;7:120-6.<br>
+3)Avinash BL, Vasantha Kamath<br>
+An interesting case of hyperhomocysteinemia presenting as acute myocardial infarction and cerebral venous thrombosis. APIK J Int Med 2021;9:116-9.</p>
+</ul>
+        </div>
+  <label class="toggle-label" for="toggle1">
+    <span class="more text-decoration-underline font-weight-600">Show More +</span>
+    <span class="less text-decoration-underline lesssdata font-weight-600">Show Less -</span>
+  </label>
+  </div>
+		
+<h2 class="font-size20 sm-font-size16 main-color margin-30px-top sm-margin-50px-top">Services</h2>
+        <!-- Services Tab -->
+		<div class="more-less-toggle">
+  <input type="checkbox" id="toggle2">
+        <div id="" class="more-content container tab-pane" role="tabpanel"> 
+            <h2 class="secondary-color font-size16 sm-font-size16 font-weight-700">Medical Conditions Treated:</h2>
+           <ul class="width-100 float-left">
+    <p>•	Fever Treatment,<br>
+•	Cold Treatment,<br>
+•	Cough Treatment,<br>
+•	Headache Treatment,<br>
+•	Stomach ache Treatment,<br>
+•	Flu Treatment,<br>
+•	Hypertension (High Blood Pressure) Treatment,<br>
+•	Diabetes Treatment,<br>
+•	Allergies Treatment,<br>
+•	Fatigue Treatment,<br>
+•	Diarrhoea Treatment<br>
+•	Diabetes Management &amp; Treatment<br>
+•	Diabetes Diet Counselling and Insulin<br>
+•	COVID-19 <br>
+•	Vaccinations and Immunization Consultations<br>
+•	Heart related Consultations<br>
+•	Hypertension Treatment</p>
+<p>Key Conditions &amp; Treatments: <br>
+• Fever • Ear Infection • Allergies • Stomachache • Rashes • Vaccinations • Metabolic disorders • High blood pressure • Digestive disorders • Obesity • Fatigue • Migraine • Hypertension • Food allergies • Cold • Cough • Headache • Flu • Varicose veins • Deep vein thrombosis • Carotid artery disease • Appendicitis • Gall stones • Hernia • Gastrointestinal bleeding • Esophageal reflux • Thoracic trauma • Pleural effusion • Allergic reaction • Acute abdominal pain • Gastrointestinal disorders • Infection • Sinusitis • Tonsillitis • Laryngitis • Viral illnesses • Anemia • Bleeding disorders • Sickle cell disease • Thrombosis • Headaches • Body pains • Tiredness • Sore Throat • Stomach Ache • Urinary Tract Infections • Running Nose • Stomach Pain • Vomitings • Gastro Esophageal Reflux Disease (GERD) • Lactose Intolerance • Long COVID-Post-COVID conditions • Bad Breath • Measles • Hepatitis • Cancer • Deafness • Heat Related Illnesses • Plague • Vitamin B12 Deficiency • Mucormycosis • Hand, Foot And Mouth Disease • Whooping Cough • Mouth Breathing • Rheumatic Fever And Rheumatic Heart Disease • Inflammatory Bowel Disease • Nasal Polyps • Iron Deficiency Anemia • Bedsores • Jaundice • Lead Poisoning • Typhoid • Chikungunya Fever • Dengue Fever • Nipah virus infection • Cold and Cough • Dizziness • Hepatitis • Abdominal Pain • Swelling in the feet • Testicles Enlargement • Small Testicles • Urinary Incontinence in Men • Urinary Bladder Infections in Women • Urinary Bladder Infections in Men • Pus Infection • Vitamin D Deficiency • Vitamin Deficiency • Muscle Weakness • Liver Disorders • Diarrhea • Constipation • Food Poisoning • Malaria • Cough • Malnutrition • Health care specialist • Cold Cough • Chronic pain management • Fibromyalgia • Nutrient Deficiencies • Diarrhoea • Lower back pain • High cholesterol • Coronavirus • COVID-19 • Chickenpox • Sugar • Mouth Ulcers • Tuberculosis • TB • Gallstones • Cholera • Sleep apnea • Tremors • Gastric problem • Piles • Vaginitis • Numbness • Peripheral artery disease • Vitamin Deficiency</p>
+</ul>
+        </div>
+		
+		 <label class="toggle-label" for="toggle2">
+    <span class="more text-decoration-underline font-weight-600">Show More +</span>
+    <span class="less text-decoration-underline font-weight-600">Show Less -</span>
+		
+    </label></div>
+	
+	 
+<!-- JavaScript to fix tab scrolling -->
+<script>
+jQuery(document).ready(function($) {
+$('.nav-pills a').on('click', function(e) {
+    e.preventDefault();
+    $(this).tab('show'); // Show the tab content
+});
+});
+</script>
+
+
+  <!--End About the doctor-->
+  <!-- Start Related Treatment -->
+      <!-- Start Related treatments section -->
+
+    <section class="sm-margin-20px-tb sm-padding-5px-tb margin-0px-top clearfix">
+      <div class="container sm-margin-20px-top">
+                  <h2 class="font-size20 sm-font-size18 font-weight-700 margin-0px-bottom text-black padding-10px-tb sm-no-padding-tb  ">
+            Related Treatments</h2>
+          <p><b>Click to see the doctors for related treatments</b></p>
+                <div class="row">
+                          <div class="col-lg-2 col-md-6 col-sm-6 padding-30px-all  sm-padding-5px-all sm-width-33 padding-5px-tb">
+                  <div class="feature-box-01 sm-padding-15px-all padding-5px-all padding-10px-bottom" style="border-radius: 5px;">
+                    <a href="https://medicasapp.com/doctors-in-bangalore/symptom-diabetes/" title="Diabetes">
+                      <img alt="Diabetes" src="https://medicasapp.com/wp-content/uploads/2025/03/Diabetes.svg" class="margin-10px-bottom">
+                      <h3 class="font-size14 sm-font-size16 no-margin-top text-center margin-5px-bottom margin-10px-top">
+                        Diabetes                      </h3>
+                    </a>
+                  </div>
+                </div>
+                              <div class="col-lg-2 col-md-6 col-sm-6 padding-30px-all  sm-padding-5px-all sm-width-33 padding-5px-tb">
+                  <div class="feature-box-01 sm-padding-15px-all padding-5px-all padding-10px-bottom" style="border-radius: 5px;">
+                    <a href="https://medicasapp.com/doctors-in-bangalore/symptom-allergies/" title="Allergies">
+                      <img alt="Allergies" src="https://medicasapp.com/wp-content/uploads/2025/03/Allergies-1.svg" class="margin-10px-bottom">
+                      <h3 class="font-size14 sm-font-size16 no-margin-top text-center margin-5px-bottom margin-10px-top">
+                        Allergies                      </h3>
+                    </a>
+                  </div>
+                </div>
+                              <div class="col-lg-2 col-md-6 col-sm-6 padding-30px-all  sm-padding-5px-all sm-width-33 padding-5px-tb">
+                  <div class="feature-box-01 sm-padding-15px-all padding-5px-all padding-10px-bottom" style="border-radius: 5px;">
+                    <a href="https://medicasapp.com/doctors-in-bangalore/symptom-cold/" title="Cold">
+                      <img alt="Cold" src="https://medicasapp.com/wp-content/uploads/2025/03/Cold.svg" class="margin-10px-bottom">
+                      <h3 class="font-size14 sm-font-size16 no-margin-top text-center margin-5px-bottom margin-10px-top">
+                        Cold                      </h3>
+                    </a>
+                  </div>
+                </div>
+                              <div class="col-lg-2 col-md-6 col-sm-6 padding-30px-all  sm-padding-5px-all sm-width-33 padding-5px-tb">
+                  <div class="feature-box-01 sm-padding-15px-all padding-5px-all padding-10px-bottom" style="border-radius: 5px;">
+                    <a href="https://medicasapp.com/doctors-in-bangalore/symptom-cough/" title="Cough">
+                      <img alt="Cough" src="https://medicasapp.com/wp-content/uploads/2025/03/Cough.svg" class="margin-10px-bottom">
+                      <h3 class="font-size14 sm-font-size16 no-margin-top text-center margin-5px-bottom margin-10px-top">
+                        Cough                      </h3>
+                    </a>
+                  </div>
+                </div>
+                              <div class="col-lg-2 col-md-6 col-sm-6 padding-30px-all  sm-padding-5px-all sm-width-33 padding-5px-tb">
+                  <div class="feature-box-01 sm-padding-15px-all padding-5px-all padding-10px-bottom" style="border-radius: 5px;">
+                    <a href="https://medicasapp.com/doctors-in-bangalore/symptom-fatigue/" title="Fatigue">
+                      <img alt="Fatigue" src="https://medicasapp.com/wp-content/uploads/2025/03/Fatigue.svg" class="margin-10px-bottom">
+                      <h3 class="font-size14 sm-font-size16 no-margin-top text-center margin-5px-bottom margin-10px-top">
+                        Fatigue                      </h3>
+                    </a>
+                  </div>
+                </div>
+                              <div class="col-lg-2 col-md-6 col-sm-6 padding-30px-all  sm-padding-5px-all sm-width-33 padding-5px-tb">
+                  <div class="feature-box-01 sm-padding-15px-all padding-5px-all padding-10px-bottom" style="border-radius: 5px;">
+                    <a href="https://medicasapp.com/doctors-in-bangalore/symptom-fever/" title="Fever">
+                      <img alt="Fever" src="https://medicasapp.com/wp-content/uploads/2025/03/Fever.svg" class="margin-10px-bottom">
+                      <h3 class="font-size14 sm-font-size16 no-margin-top text-center margin-5px-bottom margin-10px-top">
+                        Fever                      </h3>
+                    </a>
+                  </div>
+                </div>
+                              <div class="col-lg-2 col-md-6 col-sm-6 padding-30px-all  sm-padding-5px-all sm-width-33 padding-5px-tb">
+                  <div class="feature-box-01 sm-padding-15px-all padding-5px-all padding-10px-bottom" style="border-radius: 5px;">
+                    <a href="https://medicasapp.com/doctors-in-bangalore/symptom-flu/" title="Flu">
+                      <img alt="Flu" src="https://medicasapp.com/wp-content/uploads/2025/03/Flu.svg" class="margin-10px-bottom">
+                      <h3 class="font-size14 sm-font-size16 no-margin-top text-center margin-5px-bottom margin-10px-top">
+                        Flu                      </h3>
+                    </a>
+                  </div>
+                </div>
+                              <div class="col-lg-2 col-md-6 col-sm-6 padding-30px-all  sm-padding-5px-all sm-width-33 padding-5px-tb">
+                  <div class="feature-box-01 sm-padding-15px-all padding-5px-all padding-10px-bottom" style="border-radius: 5px;">
+                    <a href="https://medicasapp.com/doctors-in-bangalore/symptom-headache/" title="Headache">
+                      <img alt="Headache" src="https://medicasapp.com/wp-content/uploads/2025/03/Headache.svg" class="margin-10px-bottom">
+                      <h3 class="font-size14 sm-font-size16 no-margin-top text-center margin-5px-bottom margin-10px-top">
+                        Headache                      </h3>
+                    </a>
+                  </div>
+                </div>
+                              <div class="col-lg-2 col-md-6 col-sm-6 padding-30px-all  sm-padding-5px-all sm-width-33 padding-5px-tb">
+                  <div class="feature-box-01 sm-padding-15px-all padding-5px-all padding-10px-bottom" style="border-radius: 5px;">
+                    <a href="https://medicasapp.com/doctors-in-bangalore/symptom-hypertension-high-blood-pressure/" title="High BP">
+                      <img alt="High BP" src="https://medicasapp.com/wp-content/uploads/2025/03/Hypertension-High-Blood-Pressure.svg" class="margin-10px-bottom">
+                      <h3 class="font-size14 sm-font-size16 no-margin-top text-center margin-5px-bottom margin-10px-top">
+                        High BP                      </h3>
+                    </a>
+                  </div>
+                </div>
+                              <div class="col-lg-2 col-md-6 col-sm-6 padding-30px-all  sm-padding-5px-all sm-width-33 padding-5px-tb">
+                  <div class="feature-box-01 sm-padding-15px-all padding-5px-all padding-10px-bottom" style="border-radius: 5px;">
+                    <a href="https://medicasapp.com/doctors-in-bangalore/symptom-stomachache/" title="Stomachache">
+                      <img alt="Stomachache" src="https://medicasapp.com/wp-content/uploads/2025/03/Stomachache.svg" class="margin-10px-bottom">
+                      <h3 class="font-size14 sm-font-size16 no-margin-top text-center margin-5px-bottom margin-10px-top">
+                        Stomachache                      </h3>
+                    </a>
+                  </div>
+                </div>
+              
+
+
+        </div>
+      </div>
+    </section>
+    <!-- End Related treatments section -->
+
+
+  <!-- End Related Treatment -->
+
+  <!--Related Doctors-->
+  <!--<section class="sm-margin-20px-tb sm-padding-5px-tb margin-0px-top">
+    <div class="container">
+      <h2
+        class="secondary-color font-size24 sm-font-size18 font-weight-700 margin-20px-bottom text-black padding-10px-tb sm-no-padding-tb  ">
+        Other doctors for “ General Practitioner " </h2>
+
+        <div class="border float-left width-100 padding-15px-bottom margin-20px-bottom">
+
+            <a href="javascript:void(0)"
+              class="product-block width-15 xs-width-35 float-left position-relative text-center margin-15px-top sm-margin-15px-top">
+              <img src="<//?php echo get_stylesheet_directory_uri(); ?>/img/doctor.png" alt="" class="width-65 sm-width-80 margin-lr-auto margin-10px-bottom"><br>
+              <span class="bg-theme text-white padding-5px-tb padding-15px-lr border-radius-5 font-weight-500">Rs
+                499</span>
+            </a>
+
+            <div class="float-left width-45 xs-width-65 padding-20px-all sm-padding-5px-lr sm-padding-15px-top">
+              <div class="text-left">
+                <h3 class="font-size18 sm-font-size16 margin-5px-bottom font-weight-700 sm-margin-0px-bottom"> Dr. Sri Kanth <span
+                    class="padding-5px-left"> <img src="img/tested.svg" alt="" width="20" class="vertical-align-middle"></span> </h3>
+                <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500 margin-0px-bottom">General
+                  practitioner</p>
+                <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500 margin-0px-bottom">MBBS</p>
+                <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500 margin-0px-bottom">14yr
+                  experience <img src="<//?php echo get_stylesheet_directory_uri(); ?>/img/map.svg" alt="" width="15" class="vertical-align-middle"> Vishakaptnam</p>
+                <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500 margin-0px-bottom"><span
+                    class="padding-5px-left"> <img src="<//?php echo get_stylesheet_directory_uri(); ?>/img/comments.svg" alt="" width="15" class="vertical-align-middle"></span> Telugu, Hindi,
+                  English</p>
+
+              </div>
+
+            </div>
+
+            <div
+              class="float-right width-35 xs-width-100 padding-10px-all sm-padding-10px-tb sm-padding-20px-lr margin-50px-top sm-margin-5px-top">
+              <a href="#"
+                class="clinic-btn  sm-font-size15 font-size14 sm-padding-15px-lr text-center sm-display-block sm-width-45 width-45 float-left display-none sm-display-none"><span>
+                  Clinic Visit</span></a>
+              <a href="#"
+                class="new-btn2 sm-font-size15 font-size14 sm-padding-15px-lr text-center sm-display-block sm-width-90 width-90 float-left margin-10px-left"><span>
+                  Book Online</span></a>
+            </div>
+
+          </div>
+
+
+          <div class="border float-left width-100 padding-15px-bottom margin-20px-bottom">
+
+              <a href="javascript:void(0)"
+                class="product-block width-15 xs-width-35 float-left position-relative text-center margin-15px-top sm-margin-15px-top">
+                <img src="<//?php echo get_stylesheet_directory_uri(); ?>/img/doctor.png" alt="" class="width-65 sm-width-80 margin-lr-auto margin-10px-bottom"><br>
+                <span class="bg-theme text-white padding-5px-tb padding-15px-lr border-radius-5 font-weight-500">Rs
+                  499</span>
+              </a>
+
+              <div class="float-left width-45 xs-width-65 padding-20px-all sm-padding-5px-lr sm-padding-15px-top">
+                <div class="text-left">
+                  <h3 class="font-size18 sm-font-size16 margin-5px-bottom font-weight-700 sm-margin-0px-bottom"> Dr. Sri Kanth <span
+                      class="padding-5px-left"> <img src="img/tested.svg" alt="" width="20"></span> </h3>
+                  <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500 margin-0px-bottom">General
+                    practitioner</p>
+                  <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500 margin-0px-bottom">MBBS</p>
+                  <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500 margin-0px-bottom">14yr
+                    experience <img src="<//?php echo get_stylesheet_directory_uri(); ?>/img/map.svg" alt="" width="15" class="vertical-align-middle"> Vishakaptnam</p>
+                  <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500 margin-0px-bottom"><span
+                      class="padding-5px-left"> <img src="<//?php echo get_stylesheet_directory_uri(); ?>/img/comments.svg" alt="" width="15" class="vertical-align-middle"></span> Telugu, Hindi,
+                    English</p>
+
+                </div>
+
+              </div>
+
+              <div
+                class="float-right width-35 xs-width-100 padding-10px-all sm-padding-10px-tb sm-padding-20px-lr margin-50px-top sm-margin-5px-top">
+                <a href="#"
+                  class="clinic-btn  sm-font-size15 font-size14 sm-padding-15px-lr text-center sm-display-block sm-width-45 width-45 float-left display-none sm-display-none"><span>
+                    Clinic Visit</span></a>
+                <a href="#"
+                  class="new-btn2 sm-font-size15 font-size14 sm-padding-15px-lr text-center sm-display-block sm-width-90 width-90 float-left margin-10px-left"><span>
+                    Book Online</span></a>
+              </div>
+
+            </div>
+    </div>
+  </section>-->
+      <section class="sm-margin-20px-tb sm-padding-5px-tb margin-0px-top">
+        <div class="container">
+            <h2 class="font-size20 sm-font-size18 font-weight-700 margin-20px-bottom text-black padding-10px-tb sm-no-padding-tb">
+                Other doctors for “<span class="main-color">General Practitioner</span>”
+            </h2>
+
+            
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="margin-30px-bottom sm-margin-0px-bottom">
+                            <div class="border float-left width-100 padding-15px-bottom margin-20px-bottom">
+
+                                <a href="https://medicasapp.com/in/doctors-in-ahmedabad/general-practitioner/dr-vishvamitra-r-tindwani/" title="Dr Vishvamitra R Tindwani" class="product-block width-15 xs-width-35 float-left position-relative text-center margin-15px-top sm-margin-15px-top">
+    <img src="https://medicasapp.com/wp-content/themes/divi-child/img/doctor.png" alt="Dr Vishvamitra R Tindwani" class="width-100px sm-width-80px margin-lr-auto margin-10px-bottom sm-margin-5px-bottom rounded-circle height-100px sm-height-80px">
+                                      <br>
+                                    <span class="bg-theme text-white padding-5px-tb padding-15px-lr border-radius-5 font-weight-500">
+                                        ₹ 599.00                                    </span>
+                                </a>
+
+                                <div class="float-left width-55 xs-width-65 padding-20px-all sm-padding-5px-lr sm-padding-15px-top text-black">
+                                    <div class="text-left">
+                                                      <h2 class="font-size18 sm-font-size14 margin-5px-bottom font-weight-700">
+    <a href="https://medicasapp.com/in/doctors-in-ahmedabad/general-practitioner/dr-vishvamitra-r-tindwani/" title="Dr Vishvamitra R Tindwani">
+        Dr Vishvamitra R Tindwani        <span class="padding-5px-left">
+            <img src="https://medicasapp.com/wp-content/themes/divi-child/img/tested.svg" alt="tested" width="20" class="vertical-align-middle">
+        </span>
+    </a>
+</h2>
+                                        <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500">General Practitioner</p>
+                                        <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500">MBBS</p>
+                                        <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500">
+                                            50yr experience
+                                            <img src="https://medicasapp.com/wp-content/themes/divi-child/img/map.svg" alt="map" width="15" class="vertical-align-middle">
+                                            Ahmedabad                                        </p>
+                                        <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500">
+                                            <img src="https://medicasapp.com/wp-content/themes/divi-child/img/comments.svg" alt="comments" width="15" class="vertical-align-middle">
+                                            English, Hindi, Gujarati, Sindhi                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="float-right width-20 xs-width-100 padding-10px-all sm-padding-10px-tb sm-padding-20px-lr margin-50px-top sm-margin-5px-top sm-display-none">
+                                    <a href=" " title="Book Online" class="new-btn2 sm-font-size15 font-size14 sm-padding-15px-lr text-center sm-display-block sm-width-90 width-85 float-left margin-10px-left">
+                                        <span>Book Online</span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="margin-30px-bottom sm-margin-0px-bottom">
+                            <div class="border float-left width-100 padding-15px-bottom margin-20px-bottom">
+
+                                <a href="https://medicasapp.com/in/doctors-in-visakhapatnam/general-practitioner/dr-juvvala-nageswara-rao/" title="Dr Juvvala Nageswara Rao" class="product-block width-15 xs-width-35 float-left position-relative text-center margin-15px-top sm-margin-15px-top">
+    <img src="https://medicasapp.com/wp-content/themes/divi-child/img/doctor.png" alt="Dr Juvvala Nageswara Rao" class="width-100px sm-width-80px margin-lr-auto margin-10px-bottom sm-margin-5px-bottom rounded-circle height-100px sm-height-80px">
+                                      <br>
+                                    <span class="bg-theme text-white padding-5px-tb padding-15px-lr border-radius-5 font-weight-500">
+                                        ₹ 299.00                                    </span>
+                                </a>
+
+                                <div class="float-left width-55 xs-width-65 padding-20px-all sm-padding-5px-lr sm-padding-15px-top text-black">
+                                    <div class="text-left">
+                                                      <h2 class="font-size18 sm-font-size14 margin-5px-bottom font-weight-700">
+    <a href="https://medicasapp.com/in/doctors-in-visakhapatnam/general-practitioner/dr-juvvala-nageswara-rao/" title="Dr Juvvala Nageswara Rao">
+        Dr Juvvala Nageswara Rao        <span class="padding-5px-left">
+            <img src="https://medicasapp.com/wp-content/themes/divi-child/img/tested.svg" alt="tested" width="20" class="vertical-align-middle">
+        </span>
+    </a>
+</h2>
+                                        <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500">General Practitioner</p>
+                                        <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500">MBBS, Diploma in Public Health</p>
+                                        <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500">
+                                            44yr experience
+                                            <img src="https://medicasapp.com/wp-content/themes/divi-child/img/map.svg" alt="map" width="15" class="vertical-align-middle">
+                                            Visakhapatnam                                        </p>
+                                        <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500">
+                                            <img src="https://medicasapp.com/wp-content/themes/divi-child/img/comments.svg" alt="comments" width="15" class="vertical-align-middle">
+                                            English, Telugu                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="float-right width-20 xs-width-100 padding-10px-all sm-padding-10px-tb sm-padding-20px-lr margin-50px-top sm-margin-5px-top sm-display-none">
+                                    <a href=" " title="Book Online" class="new-btn2 sm-font-size15 font-size14 sm-padding-15px-lr text-center sm-display-block sm-width-90 width-85 float-left margin-10px-left">
+                                        <span>Book Online</span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="margin-30px-bottom sm-margin-0px-bottom">
+                            <div class="border float-left width-100 padding-15px-bottom margin-20px-bottom">
+
+                                <a href="https://medicasapp.com/in/doctors-in-thane/general-practitioner/dr-sanjay-gopal-pingulkar/" title="Dr Sanjay Gopal Pingulkar" class="product-block width-15 xs-width-35 float-left position-relative text-center margin-15px-top sm-margin-15px-top">
+    <img src="https://medicasapp.com/wp-content/themes/divi-child/img/doctor.png" alt="Dr Sanjay Gopal Pingulkar" class="width-100px sm-width-80px margin-lr-auto margin-10px-bottom sm-margin-5px-bottom rounded-circle height-100px sm-height-80px">
+                                      <br>
+                                    <span class="bg-theme text-white padding-5px-tb padding-15px-lr border-radius-5 font-weight-500">
+                                        ₹ 569.00                                    </span>
+                                </a>
+
+                                <div class="float-left width-55 xs-width-65 padding-20px-all sm-padding-5px-lr sm-padding-15px-top text-black">
+                                    <div class="text-left">
+                                                      <h2 class="font-size18 sm-font-size14 margin-5px-bottom font-weight-700">
+    <a href="https://medicasapp.com/in/doctors-in-thane/general-practitioner/dr-sanjay-gopal-pingulkar/" title="Dr Sanjay Gopal Pingulkar">
+        Dr Sanjay Gopal Pingulkar        <span class="padding-5px-left">
+            <img src="https://medicasapp.com/wp-content/themes/divi-child/img/tested.svg" alt="tested" width="20" class="vertical-align-middle">
+        </span>
+    </a>
+</h2>
+                                        <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500">General Practitioner</p>
+                                        <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500">MBBS. General Physician</p>
+                                        <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500">
+                                            35yr experience
+                                            <img src="https://medicasapp.com/wp-content/themes/divi-child/img/map.svg" alt="map" width="15" class="vertical-align-middle">
+                                            Thane                                        </p>
+                                        <p class="margin-0px-bottom font-size14 sm-font-size13 font-weight-500">
+                                            <img src="https://medicasapp.com/wp-content/themes/divi-child/img/comments.svg" alt="comments" width="15" class="vertical-align-middle">
+                                            English, Hindi, Marathi                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="float-right width-20 xs-width-100 padding-10px-all sm-padding-10px-tb sm-padding-20px-lr margin-50px-top sm-margin-5px-top sm-display-none">
+                                    <a href=" " title="Book Online" class="new-btn2 sm-font-size15 font-size14 sm-padding-15px-lr text-center sm-display-block sm-width-90 width-85 float-left margin-10px-left">
+                                        <span>Book Online</span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </section>
+
+
+  <!--Start FAQ's-->
+
+  
+
+      <!-- Start FAQ section -->
+      <section class="margin-10px-top sm-display-none" style="background-color: rgb(244, 253, 253); margin-bottom: 20px; color: rgb(0, 0, 0);">
+      <div class="container">
+        <div class="text-left font-weight-800">
+          <h2 class="font-size20 font-weight-700 margin-30px-top sm-margin-50px-top">FAQ’s</h2>
+        </div>
+                  <div class="row">
+            <div class="col-md-12">
+              <div id="accordion" class="accordion-style1">
+                                  <div class="card accordian-focus">
+                    <div class="card-header" id="heading182576">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link font-weight-bold " data-toggle="collapse" data-target="#collapse182576" aria-expanded="true" aria-controls="collapse182576">How frequently is a GP consultation recommended for preventive care?</button>
+                      </h3>
+                    </div>
+                    <div id="collapse182576" class="collapse  show" aria-labelledby="heading182576" data-parent="#accordion" style="">
+                      <div class="card-body faq-style1"><span data-sheets-root="1">A regular health check up every 6–12 months keeps your health in check. Schedule a hassle-free consultation through Medicas.</span></div>
+                    </div>
+                  </div>
+                                    <div class="card accordian-focus">
+                    <div class="card-header" id="heading182575">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link font-weight-bold collapsed" data-toggle="collapse" data-target="#collapse182575" aria-expanded="false" aria-controls="collapse182575">What medical issues can be treated by a general practitioner?</button>
+                      </h3>
+                    </div>
+                    <div id="collapse182575" class="collapse  " aria-labelledby="heading182575" data-parent="#accordion" style="">
+                      <div class="card-body faq-style1"><span data-sheets-root="1">A general medical practitioner near me can manage routine illnesses efficiently—book your appointment on Medicas today.</span></div>
+                    </div>
+                  </div>
+                                    <div class="card accordian-focus">
+                    <div class="card-header" id="heading182574">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link font-weight-bold collapsed" data-toggle="collapse" data-target="#collapse182574" aria-expanded="false" aria-controls="collapse182574">What are the benefits of visiting a GP before approaching a specialist?</button>
+                      </h3>
+                    </div>
+                    <div id="collapse182574" class="collapse  " aria-labelledby="heading182574" data-parent="#accordion" style="">
+                      <div class="card-body faq-style1"><span data-sheets-root="1">Consult the best general practitioner like Dr. Avinash online via Medicas for timely and effective care.</span></div>
+                    </div>
+                  </div>
+                                    <div class="card accordian-focus">
+                    <div class="card-header" id="heading176092">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link font-weight-bold collapsed" data-toggle="collapse" data-target="#collapse176092" aria-expanded="false" aria-controls="collapse176092">What is the consultation fee for Dr. B. L. Avinash?</button>
+                      </h3>
+                    </div>
+                    <div id="collapse176092" class="collapse  " aria-labelledby="heading176092" data-parent="#accordion" style="">
+                      <div class="card-body faq-style1"><span data-sheets-root="1">The consultation fee for an <a class="in-cell-link" href="https://medicasapp.com/in/consult-now/" target="_blank" rel="noopener">online doctor consultation</a> with Dr. B. L. Avinash is ₹300.</span></div>
+                    </div>
+                  </div>
+                                    <div class="card accordian-focus">
+                    <div class="card-header" id="heading107186">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link font-weight-bold collapsed" data-toggle="collapse" data-target="#collapse107186" aria-expanded="false" aria-controls="collapse107186">How can I book an appointment with Dr. B.L. Avinash?</button>
+                      </h3>
+                    </div>
+                    <div id="collapse107186" class="collapse  " aria-labelledby="heading107186" data-parent="#accordion" style="">
+                      <div class="card-body faq-style1">You can easily book an appointment with Dr. B.L. Avinash through Medicas, where he offers expert consultations in General Medicine and Pediatrics.</div>
+                    </div>
+                  </div>
+                                    <div class="card accordian-focus">
+                    <div class="card-header" id="heading184324">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link font-weight-bold collapsed" data-toggle="collapse" data-target="#collapse184324" aria-expanded="false" aria-controls="collapse184324">Where does Dr. B.L. Avinash practice?</button>
+                      </h3>
+                    </div>
+                    <div id="collapse184324" class="collapse  " aria-labelledby="heading184324" data-parent="#accordion" style="">
+                      <div class="card-body faq-style1">Dr. B.L. Avinash practices in Bangalore, Karnataka, with a focus on pediatric care and general medicine. He is currently consulting at Even Healthcare and is a visiting doctor at several hospitals, including Apollo, Bangalore Kidney Care Centre, and others.</div>
+                    </div>
+                  </div>
+                                    <div class="card accordian-focus">
+                    <div class="card-header" id="heading107184">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link font-weight-bold collapsed" data-toggle="collapse" data-target="#collapse107184" aria-expanded="false" aria-controls="collapse107184">What languages does Dr. B.L. Avinash speak?</button>
+                      </h3>
+                    </div>
+                    <div id="collapse107184" class="collapse  " aria-labelledby="heading107184" data-parent="#accordion" style="">
+                      <div class="card-body faq-style1">Dr. Avinash is fluent in English, Hindi, and Telugu, ensuring effective communication with patients from diverse backgrounds.</div>
+                    </div>
+                  </div>
+                                    <div class="card accordian-focus">
+                    <div class="card-header" id="heading184323">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link font-weight-bold collapsed" data-toggle="collapse" data-target="#collapse184323" aria-expanded="false" aria-controls="collapse184323">What is Dr. B.L. Avinash’s area of expertise?</button>
+                      </h3>
+                    </div>
+                    <div id="collapse184323" class="collapse  " aria-labelledby="heading184323" data-parent="#accordion" style="">
+                      <div class="card-body faq-style1">Dr. Avinash specializes in General Medicine, with a particular passion for pediatrics. His experience extends to managing critical cases, including COVID-19 patients, as well as contributing to medical research and education.</div>
+                    </div>
+                  </div>
+                                    <div class="card accordian-focus">
+                    <div class="card-header" id="heading107182">
+                      <h3 class="mb-0">
+                        <button class="btn btn-link font-weight-bold collapsed" data-toggle="collapse" data-target="#collapse107182" aria-expanded="false" aria-controls="collapse107182">What qualifications does Dr. B.L. Avinash hold?</button>
+                      </h3>
+                    </div>
+                    <div id="collapse107182" class="collapse  " aria-labelledby="heading107182" data-parent="#accordion" style="">
+                      <div class="card-body faq-style1">Dr. Avinash holds an MBBS from Vydehi Institute of Medical Sciences and has completed a Postgraduate cum Tutor role at MVJ Medical College and Research Institute. He has also contributed to numerous research projects, especially in dengue fever and concurrent infections.</div>
+                    </div>
+                  </div>
+                  
+                
+
+              </div>
+            </div>
+                        <div class="container">
+              <p class="notecontent1"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+        <!-- End FAQ's--> 
+  <!--Start MObile FAQ's-->
+   
+  <!-- End Mobile FAQ's-->
+
+
+  <!-- Start Bottom Popup Modal -->
+  <div class="modal fade bottom-popup" id="bottomPopup" tabindex="-1" role="dialog" aria-labelledby="bottomPopupLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title main-color" id="bottomPopupLabel">Schedule Online Consult</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <!--Start time-slots Section -->
+          
+          <!--End time-slots Section -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End Bottom Popup Modal -->
+  <!-- Strat Hyper local pages-->
+  <section>
+      <div class="container">
+        <!--<h2 class="font-size18 font-weight-800 margin-10px-bottom padding-20px-top ">
+          Allergies Treatment in Top Cities
+        </h2>
+        <ul class="tophospitals margin-20px-left sm-margin-20px-left margin-0px-top">
+          <li><a href="#">
+              Allergies Treatment in
+              Visakhapatnam </a> |</li>
+          <li><a href="#">
+              Allergies Treatment in
+              Hyderabad </a> |</li>
+          <li><a href="#">
+              Allergies Treatment in Bangalore </a> |
+          </li>
+          <li><a href="#">
+              Allergies Treatment in Chennai </a> |
+          </li>
+          <li><a href="#">
+              Allergies Treatment in Vijayawada
+            </a> |
+          </li>
+          <li><a href="#">
+              Allergies Treatment in Tirupati </a>
+            |
+          </li>
+          <li><a href="#">
+              Allergies Treatment in Delhi </a> |</li>
+          <li><a href="#">
+              Allergies Treatment in Mumbai </a> |
+          </li>
+          <li><a href="#">
+              Allergies Treatment in Pune </a> |</li>
+          <li><a href="#">
+              Allergies Treatment in Kolkata </a>
+          </li>
+        </ul>--->
+         <h2 class="font-size18 font-weight-800 margin-10px-bottom padding-20px-top">Top Specialities In
+	            India </h2>
+        <ul class="tophospitals margin-20px-left sm-margin-20px-left margin-0px-top">
+	            <li><a href="https://medicasapp.com/in/cardiology/" title="Cardiology"> Cardiologists in India </a>
+	                |</li>
+	            <li><a href="https://medicasapp.com/in/dentist/" title="Dentist">Dentists in India</a> |
+	            </li>
+	            <li><a href="https://medicasapp.com/in/dermatology/" title="Dermatology">Dermatologists in
+	                    India</a>
+	                |</li>
+	            <li><a href="https://medicasapp.com/in/obstetrics-gynecology/" title="Obstetrics Gynecology">Gynecologist/Obstetricians in
+	                    India</a> |</li>
+	            <li><a href="https://medicasapp.com/in/general-practitioner/" title="Gneneral Practitioner">General Practitioners in
+	                    India</a> |
+	            </li>
+	            <li><a href="https://medicasapp.com/in/orthopedics/" title="Orthopedics"> Orthopedists in
+	                    India</a>
+	                |</li>
+	            <li><a href="https://medicasapp.com/in/oncology/" title="Oncology">Oncologists in India</a> |
+	            </li>
+	            <li><a href="https://medicasapp.com/in/pediatrics/" title="Pediatrics">Pediatricians in
+	                    India</a> |
+	            </li>
+	            <li><a href="https://medicasapp.com/in/diabetologist/" title="Diabetologist">Diabetologists in
+	                    India</a>
+	                |</li>
+	            <li><a href="https://medicasapp.com/in/psychiatry/" title="Psychiatry">Psychiatrists in
+	                    India</a>
+	            </li>
+	        </ul>
+	        <h2 class="font-size18 font-weight-800 margin-10px-bottom padding-20px-top">Top Treatments in
+	            India </h2>
+	        <ul class="tophospitals margin-20px-left sm-margin-20px-left margin-0px-top">
+	            <li><a href="https://medicasapp.com/in/symptom-diabetes/" title="Diabetes">Diabetes Treatment in
+	                    India</a>
+	                |</li>
+	            <li><a href="https://medicasapp.com/in/symptom-arthritis/" title="Arthritis">Arthritis Treatment in
+	                    India</a> |</li>
+	            <li><a href="https://medicasapp.com/in/symptom-pcod/" title="PCOD">PCOD Treatment in
+	                    India</a> |
+	            </li>
+	            <li><a href="https://medicasapp.com/in/symptom-irregular-periods/" title="Irregular Periods">Irregular Periods Treatment in
+	                    India</a> |</li>
+	            <li><a href="https://medicasapp.com/in/symptom-male-sexual-problems/" title="Male Sexual Problems">Male Sexual Problems Treatment in
+	                    India</a> |</li>
+	            <li><a href="https://medicasapp.com/in/symptom-infertility/" title="Infertility">Infertility Treatment in
+	                    India</a> |</li>
+	            <li><a href="https://medicasapp.com/in/symptom-sciatica/" title="Sciatica">Sciatica Treatment in
+	                    India</a>
+	                |</li>
+	            <li><a href="https://medicasapp.com/in/symptom-gastric-problem/" title="Gastric Problem">Gastric Problem Treatment in
+	                    India</a> |</li>
+	            <li><a href="https://medicasapp.com/in/symptom-lower-back-pain/" title="Lower Back Pain">Lower Backpain Treatment in
+	                    India</a> |</li>
+	            <li><a href="https://medicasapp.com/in/symptom-knee-pain/" title="Knee Pain">Knee Pain Treatment in
+	                    India</a></li>
+	        </ul>
+      </div>
+    </section>
+    <!-- End  Hyper local pages-->
+</div>
+<!-- end main-wrapper section -->
+<!-- start scroll to top -->
+<a href="javascript:void(0)" class="scroll-to-top"><i class="fas fa-angle-double-up" aria-hidden="true"></i> </a>
+
+<script>
+  $(document).ready(function () {
+    $('.minus').click(function () {
+      var $input = $(this).parent().find('input');
+      var count = parseInt($input.val()) - 1;
+      count = count < 1 ? 1 : count;
+      $input.val(count);
+      $input.change();
+      return false;
+    });
+    $('.plus').click(function () {
+      var $input = $(this).parent().find('input');
+      $input.val(parseInt($input.val()) + 1);
+      $input.change();
+      return false;
+    });
+  });
+</script>
+
+<script>
+    $(document).ready(function () {
+      $('.minus').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+      });
+      $('.plus').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+      });
+    });
+  </script>
+  <!-- end scroll to top -->
+
+  <script>
+    $(".owl-carousel").owlCarousel({
+      items: 7,
+      loop: true,
+      margin: 10,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,  /* Enable Navigation */
+            dots: false, /* Disable Dots if Not Needed */
+            navText: ["⮜","⮞"], /* Custom Navigation Arrows */
+	
+            responsive:{
+                0:{ items: 3 },
+                600:{ items: 4 },
+                1000:{ items: 6 }
+            }
+        });
+    });
+</script>
+ 
+<!-- end scroll to top -->
+<!-- Start Conditions section -->
+<section>
+      <div class="padding-20px-top padding-40px-bottom">
+        <div class="row conditions-links">
+          <div class="container">
+            <div> <img src="https://medicasapp.com/wp-content/themes/divi-child/img/conditions.png" alt="Conditions" class="sm-margin-20px-left" style="width: 40px; margin-right: 15px; padding-top: 10px;"> <span class="font-size22 text-black font-weight-700" style="position: absolute; padding-top: 23px;">
+                Medical Specialties
+              </span> </div>
+          </div>
+        </div>
+         <div class="container" style="padding-left: 40px;">
+          <div class="row" style="padding-top: 30px;">
+            <div class="col-lg-4 col-md-4">
+              <ul class="doctor-nearme list-style-5 footer-links3">
+               
+                <li style="cursor: pointer;"><a title="Anesthesiology" style="font-weight: 500; color: inherit;" href="https://medicasapp.com/in/anesthesiology/">Anesthesiology</a></li>
+                <li style="cursor: pointer;"><a title="Dermatology" style="font-weight: 500; color: inherit;" href="https://medicasapp.com/in/dermatology/">Dermatology</a></li>
+                <li style="cursor: pointer;"><a title="Emergency Medicine" style="font-weight: 500; color: inherit;" href="https://medicasapp.com/in/emergency-medicine/">Emergency Medicine</a></li>
+                <li style="cursor: pointer;"><a title="Family Medicine" style="font-weight: 500; color: inherit;" href="https://medicasapp.com/in/family-medicine/">Family Medicine</a></li>
+               
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <ul class="doctor-nearme list-style-5 footer-links3">
+			   <li style="cursor: pointer;"><a title="Internal Medicine" style="font-weight: 500; color: inherit;" href="https://medicasapp.com/in/internal-medicine/">Internal Medicine</a></li>
+                <li style="cursor: pointer;"><a title="Obstetrics and Gynaecology" style="font-weight: 500; color: inherit;" href="https://medicasapp.com/in/obstetrics-gynecology/">Obstetrics and Gynaecology</a></li>
+                <li style="cursor: pointer;"><a title="Ophthalmology" style="font-weight: 500; color: inherit;" href="https://medicasapp.com/in/ophthalmology/">Ophthalmology</a></li>
+                <li style="cursor: pointer;"><a title="Pediatrics" style="font-weight: 500; color: inherit;" href="https://medicasapp.com/in/pediatrics/">Pediatrics</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <ul class="doctor-nearme list-style-5 footer-links3 ">
+                <li style="cursor: pointer;"><a title="Preventive Medicine" style="font-weight: 500; color: inherit;" href="https://medicasapp.com/in/preventive-medicine/">Preventive Medicine</a></li>
+                <li style="cursor: pointer;"><a title="Psychiatry" style="font-weight: 500; color: inherit;" href="https://medicasapp.com/in/psychiatry/">Psychiatry</a></li>
+                <li style="cursor: pointer;"><a title="Oncology" style="font-weight: 500; color: inherit;" href="https://medicasapp.com/in/oncology/">Oncology</a></li>
+                <li style="cursor: pointer;"><a title="Surgery" style="font-weight: 500; color: inherit;" href="https://medicasapp.com/in/surgery-consult/">Surgery</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Conditions section -->
+
+    <!-- Start Footer section -->
+    <footer class="row no-padding-top line-height-18 sm-padding-5px-bottom no-margin">
+      <div class="container">
+        <div class="row padding-20px-top">
+          <div class="col-lg-3 col-md-6 sm-margin-30px-bottom padding-0px-left res-pb-20px margin-30px-tb sm-padding-30px-left">
+                      
+            <h2 class="footer-title-style2 white-text"><strong>Services</strong></h2>
+             
+            <p class="margin-10px-top margin-20px-bottom white-text font-size15 line-height-20">
+            </p>
+            <ul class="list-style-1 margin-30px-bottom">
+              
+              <li style="cursor: pointer;"><span style="font-weight: normal;">
+                  <a title="Online Doctor Consultation" style="color: #fff;" href="https://medicasapp.com/in/consult-now/"> Online Doctor Consultation </a>
+                </span></li>
+                                                       <li style="cursor: pointer;">
+  <span style="font-weight: normal;">
+      <a title="Book Lab Test" style="color: #fff;" href="https://labs.medicasapp.com/in/" target="_blank">
+        Book Lab Tests at Home
+      </a>
+  </span>
+</li>
+              </ul>
+            
+			 <h2 class="footer-title-style2 white-text margin-0px-top"><strong>Locations</strong></h2>
+            <div class="row">
+              <div class="col-md-12 no-padding-right xs-padding-15px-right">
+              <ul class="footer-list xs-margin-5px-bottom quicklinks white-text line-height-20">
+              <li style="cursor: pointer;">			  <u><a title="Countries" style="color: #fff;" href="https://medicasapp.com/in/">India</a></u> | <u><a style="color: #fff;" href="https://medicasapp.com/tt/">Trinidad and Tobago</a></u> | <u><a style="color: #fff;" href="https://medicasapp.com/gd/">Grenada</a></u> | <u><a style="color: #fff;" href="https://medicasapp.com/gy/">Guyana</a></u> | <u><a style="color: #fff;" href="https://medicasapp.com/jm/">Jamaica</a></u> |  <u><a style="color: #fff;" href="https://medicasapp.com/bb/">Barbados</a></u> | <u><a style="color: #fff;" href="https://medicasapp.com/dm/">Dominica</a></u> 
+			  </li>
+            </ul>
+              </div>
+            </div>
+			
+          </div>
+          <div class="col-lg-2 col-md-6 padding-10px-lr md-padding-10px-left margin-30px-tb sm-padding-30px-lr sm-margin-0px-top">
+			 <h2 class="footer-title-style2 white-text"><strong>Quick Links</strong></h2>
+			  <ul class="list-style-1">
+			  <li><a title="Home" href="https://medicasapp.com/in/">Home</a></li>
+					<li><a title="About Us" href="https://medicasapp.com/about-us/">About Us</a></li>
+					
+              <li><a title="Instant Video Consult" href="https://medicasapp.com/in/consult-now/">Instant Video Consult</a></li>
+              <li><a title="Book Lab Test" href="https://labs.medicasapp.com/in/">Book Lab Test</a></li>
+
+    <li><a title="Health Packages" href="https://labs.medicasapp.com/in/health-packages/">Health Packages</a></li>
+					<li><a title="Health Calculators" href="https://medicasapp.com/health-calculators/">Health Calculators</a></li>
+				</ul>
+           
+          </div>
+		  <div class="col-lg-2 col-md-6 padding-10px-lr md-padding-10px-left margin-30px-tb sm-padding-30px-lr sm-margin-0px-top">
+			 <h2 class="footer-title-style2 white-text"><strong>Resources</strong></h2>
+			  <ul class="list-style-1">
+			 
+					<li><a title="Health Updates" href="https://www.blogs.medicasapp.com/">Health Updates</a></li>
+					<li><a title="Customer Testimonials" href="https://medicasapp.com/in/speciality-reviews/">Customer Testimonials</a></li>
+          
+					<li><a title="Mobile App Android" href="https://bit.ly/3w7zsle">Mobile App - Android</a></li>
+					<li><a title="Mobile App Ios" href="https://apps.apple.com/in/app/medicas/id1561657331">Mobile App - iOS</a></li>
+				 
+				</ul>
+           
+          </div>
+          		  <div class="col-lg-2 col-md-6 padding-10px-lr md-padding-10px-left margin-30px-tb sm-padding-30px-lr sm-margin-0px-top">
+			 <h2 class="footer-title-style2 white-text"><strong>Lab Tests</strong></h2>
+			 <ul class="list-style-1">
+    <li>
+        <a title="Lipid Profile" href="https://labs.medicasapp.com/in/product/lipid-profile/">Lipid Profile</a>
+    </li>
+    <li>
+        <a title="Thyroid Function Test" href="https://labs.medicasapp.com/in/product/thyroid-function-test/">Thyroid Function Test</a>
+    </li>
+    <li>
+        <a title="HBA1C Test" href="https://labs.medicasapp.com/in/product/glycosylated-hba1c/">HBA1C Test</a>
+    </li>
+    <li>
+        <a title="Liver Function Test" href="https://labs.medicasapp.com/in/product/liver-function-test/">Liver Function Test</a>
+    </li>
+    <li>
+        <a title="Cholesterol Test" href="https://labs.medicasapp.com/in/product/total-cholesterol/">Cholesterol Test</a>
+    </li>
+     
+  </ul> 
+</div>
+          <div class="col-lg-3 col-md-6 res-pb-20px f-contact  margin-30px-tb sm-margin-10px-tb">
+            <div class="padding-0px-left sm-text-left sm-padding-10px-left">
+              <h2 class="footer-title-style2 white-text sm-text-left"><strong>Contact Us</strong></h2>
+              <p class="margin-10px-top margin-20px-bottom white-text font-size15 line-height-20"><a title="mail" class="mailto text-white" href="mailto:info@medicasapp.com" style="cursor: pointer;">info@medicasapp.com</a><br>
+				                        India : +91 93918 04395 
+                   <br>
+				                
+              </p>
+              <h2 class="footer-title-style2 white-text margin-30px-top sm-text-left"><strong>For more Updates</strong>
+              </h2>
+              <div class="footer-social-icons small sm-width-100 padding-10px-right margin-50px-bottom sm-margin-10px-bottom">
+                <ul style="padding-left: 0px; margin-top: 10px; margin-left: 0px;">
+                                    
+<!-- Social Media Icons -->
+<li class="margin-5px-right">
+  <a title="Instagram" href="https://www.instagram.com/medicastelehealth/" target="_blank">
+    <img src="https://medicasapp.com/wp-content/uploads/2024/02/insta.png" alt="Instagram" style="width: 24px;">
+  </a>
+</li>
+<li class="margin-5px-right">
+  <a title="Youtube" href="https://www.youtube.com/channel/UCA9FV0WN2vV8t_22MhKJjfA" target="_blank">
+    <img src="https://medicasapp.com/wp-content/uploads/2024/02/youtube.png" alt="YouTube" style="width: 24px;">
+  </a>
+</li>
+<li class="margin-5px-right">
+  <a title="Facebook" href="https://www.facebook.com/MedicasTelehealth" target="_blank">
+    <img src="https://medicasapp.com/wp-content/uploads/2024/02/facebook.png" alt="Facebook" style="width: 24px;">
+  </a>
+</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row col-12 padding-30px-top padding-30px-bottom">
+
+
+            <a title="Cities Index" class="text-white margin-25px-right  margin-25px-left sm-margin-15px-lr sm-margin-10px-bottom" href="https://medicasapp.com/in/cities-index/">Cities Index</a> <span class="text-white">|</span>
+
+            <a title="Specialities Index" class="text-white margin-25px-right margin-25px-left sm-margin-10px-bottom  sm-margin-15px-lr" href="https://medicasapp.com/in/speciality-index/">Specialities Index</a> <span class="text-white">|</span>
+
+            <a title="Symptoms Index" class="text-white margin-25px-right margin-25px-left sm-margin-10px-bottom  sm-margin-15px-lr" href="https://medicasapp.com/in/symptoms-index/">Symptoms
+              Index</a><span class="text-white">|</span>
+
+            <a title="City Soeciality Index" class="text-white margin-25px-right margin-25px-left sm-margin-10px-bottom  sm-margin-15px-lr" href="https://medicasapp.com/in/city-speciality-index/">City Speciality Index</a><span class="text-white">|</span>
+
+            <a title="City Symptom Index" class="text-white margin-25px-right margin-25px-left sm-margin-10px-bottom  sm-margin-15px-lr" href="https://medicasapp.com/in/city-symptom-index/">City Symptom Index</a>
+
+
+
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer section -->
+    <div class="footer-bar no-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-left xs-text-center f-cright">
+            <p class="xs-margin-5px-top sm-font-size11 line-height-50" style="color: rgb(255, 255, 255); margin: 0px;">
+              Copyright 2025 © egs-health.com All Rights Reserved </p>
+          </div>
+          <div class="col-lg-6 col-md-6 text-right xs-text-center f-terms">
+            <p class=" line-height-50 sm-font-size11 text-center" style="color: rgb(255, 255, 255); margin: 0px;"><a title="Privacy Policy" class="text-white text-decoration-underline" href="https://medicasapp.com/privacy-policy.html" target="blank">Privacy Policy </a> | <a title="Terms and Conditions" class="text-white text-decoration-underline" href="https://medicasapp.com/termsofuse.html" target="blank">Terms &amp; Conditions</a> </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div id="loader" style="display: none;" class="loader-overlay">
+  <div class="loader-content">
+    <!-- <div class="spinner"></div>
+    <p>Please wait...</p> -->
+    <img src="https://medicasapp.com/wp-content/themes/divi-child/img/medicas-loader.png" alt="loader">
+  </div>
+</div>
+
+
+<div class="modal help " id="helpModal" data-backdrop="static" data-keyboard="false" style="margin-top:140px;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title h4" style="margin-left: 45%; margin-bottom: -3%;"><span style="font-size: 16px;">Help</span></div>
+        <button id="closehelpModal" type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <p class="text-center"><img src="/wp-content/uploads/2025/03/support.png" width="100" alt="Support"></p>
+                <p class="text-center line-height-16 helpHeading">Call Us for any Queries</p>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <p class="text-center supportHeading">Our customer support number</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+				                      <a title="Customer Number" href="tel: 93918 04395">
+                      <p class="text-center CSNumber">+91 93918 04395 </p>
+                    </a>
+				                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 text-center"><button class="butn width-40" id="btn_help_submit" style="margin-top: 10px;" data-dismiss="modal"><span>OK</span></button></div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 sm-margin-20px-bottoml sm-width-50"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- end main-wrapper section -->
+  <!-- start scroll to top -->
+  <a href="javascript:void(0)" class="scroll-to-top"><i class="fas fa-angle-double-up" aria-hidden="true"></i> </a>
+
+<!-----popup for out of office doctor start -------------->
+
+<div class="modal" id="myModal" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="padding-5px-tb modal-header">
+        <div class="officemodalpop modal-title h4"> <b>Out of Office </b> </div>
+        <button type="button" class="close" aria-label="Close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-officebody">
+          <b>The Physician you are trying to book is temporarily “Out of Office”. Please try later or choose another
+            Physician for consultation. </b><br>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="butn font-weight-700 font-size16 modal-footer" data-dismiss="modal"><span> OK </span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-----popup for out of office doctor end -------------->
+
+<style>
+  
+
+  .loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-content {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+</style>
+  <script>
+    $(document).ready(function () {
+      $('.minus').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+      });
+      $('.plus').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+      });
+    });
+  </script>
+  <script>
+$(document).ready(function () {
+    const calculateBtn = $('#calculate-btn'); // The button to calculate
+    const slider = $('#bmi-slider'); // The BMI slider
+    const sliderValueDisplay = $('#slider-bmi-value'); // Display slider value (if needed)
+    const calculateBtnContainer = $('#calculate-btn-container');
+    const sliderContainer = $('#bmi-slider-container');
+
+    // Initialize the slider to the minimum value
+    slider.val(slider.attr('min')).prop('disabled', true); // Set slider to start at the minimum value
+
+    if (sliderValueDisplay.length) {
+        sliderValueDisplay.text(slider.val()); // Display initial slider value (optional)
+    }
+
+    // Function to check input fields and enable/disable button
+    function checkInputFields() {
+        const age = $('#age').val();
+        const gender = $('#gender').val();
+        const weight = parseFloat($('#weight').val());
+        const height = parseFloat($('#height').val());
+
+        // Check if all required fields have values
+        if (age && gender && !isNaN(weight) && !isNaN(height)) {
+            calculateBtn.addClass('button-enabled').removeClass('button-disabled');
+        } else {
+            calculateBtn.addClass('button-disabled').removeClass('button-enabled');
+            sliderContainer.hide(); // Hide slider container initially if the button is disabled
+        }
+    }
+
+    // Check input fields on page load
+    checkInputFields();
+
+    // Add event listeners to input fields
+    $('#age, #gender, #weight, #height').on('input change', checkInputFields);
+
+    // When the button is clicked, calculate BMI
+    calculateBtn.on('click', function (event) {
+        event.preventDefault(); // Prevent form submission if inside a form
+
+        // Get form values
+        const age = $('#age').val();
+        const gender = $('#gender').val();
+        const weight = parseFloat($('#weight').val());
+        const height = parseFloat($('#height').val());
+
+        // Perform BMI calculation
+        const heightInMeters = height / 100;
+        if (heightInMeters > 0) {
+            const bmi = weight / (heightInMeters * heightInMeters);
+            let bmiResult = '';
+            let suggestions = '';
+            let suggestionHeading = '';
+
+            // Determine the BMI category
+            if (bmi < 18.5) {
+                bmiResult = 'Underweight';
+                suggestionHeading = "Underweight Alert!";
+                suggestions = 'You may need to gain weight. Consider eating nutrient-dense foods and consulting a healthcare provider.';
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                bmiResult = 'Normal weight';
+                suggestionHeading = "Healthy Weight Tip!";
+                suggestions = 'Great job! You are in a healthy weight range. Maintain a balanced diet and regular exercise.';
+            } else if (bmi >= 25 && bmi < 29.9) {
+                bmiResult = 'Overweight';
+                suggestionHeading = "Overweight Reminder!";
+                suggestions = 'Consider a healthier diet and increasing physical activity. Consult a healthcare professional for advice.';
+            } else {
+                bmiResult = 'Obesity';
+                suggestionHeading = "Obesity Warning!";
+                suggestions = 'Consult with a healthcare provider for a weight reduction plan. Focus on healthy eating and exercise.';
+            }
+
+            // Display the result
+            $('#bmi-value').text(bmi.toFixed(2));
+            $('#bmi-suggestions').text(suggestions).show();
+            $('#suggestionHeading').text(suggestionHeading);
+
+            // Show the calculate button container
+            calculateBtnContainer.css('display', 'flex');
+
+            // Show the slider container
+            sliderContainer.show();
+
+            // Update BMI slider
+            slider.val(bmi.toFixed(1)).prop('disabled', true);
+
+            // Optional: Update slider display value if needed
+            if (sliderValueDisplay.length) {
+                sliderValueDisplay.text(slider.val());
+            }
+        }
+    });
+});
+</script>
+
+<script>
+  jQuery(document).ready(function () {
+    helpModal
+    jQuery(".helpModalPopup a").click(function () {
+
+      jQuery("#helpModal").modal('show');
+    });
+    jQuery(".phy_out_of_office").click(function () {
+
+      jQuery("#myModal").modal('show');
+    });
+  });       
+</script>
+<script>
+    $(document).ready(function() {
+    function updateTimeSlots(selectedDate) {
+        $(".timing-available").each(function() {
+            let baseHref = $(this).attr("href").split('/').slice(0, -1).join('/');
+            $(this).attr("href", baseHref + "/" + selectedDate);
+            $(this).attr("data-date", selectedDate);
+        });
+    }
+
+    // Get the initially selected date or default to the first item's date
+    let selectedDate = $(".item.active").data("date") || $(".item").first().data("date");
+    updateTimeSlots(selectedDate); // Update URLs on page load
+
+    $(".item").click(function() {
+        $(".item").removeClass("active");
+        $(this).addClass("active");
+
+        selectedDate = $(this).data("date");
+        updateTimeSlots(selectedDate); // Update URLs when date changes
+    });
+});
+
+</script>
+
+
+  <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/in\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/divi-child\/*","\/wp-content\/themes\/Divi\/*","\/in\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+    <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+        // Log the entire HTML structure of the dropdown
+        var langSwitch = document.querySelector('.mltlngg-lang-switch');
+        //console.log('Language Switch HTML:', langSwitch.innerHTML); // Log full HTML
+
+        // Check if we are on the Trinidad and Tobago page (using the URL check)
+        var currentPage = window.location.href;
+        //console.log('Current Page URL:', currentPage); // Debug log to check the current page
+
+        // Select all list items with the class 'mltlngg-lang-button-icons'
+        var langItems = document.querySelectorAll('.mltlngg-lang-switch a');
+
+        // Log the total number of language items found
+        //console.log('Number of language items found:', langItems.length);
+
+        // If the current page is Trinidad and Tobago (i.e. URL contains '/tt/'), modify the text
+        if (currentPage.includes("/tt/")) {
+            langItems.forEach(function(item) {
+                // Get the text inside the item (anchor tag or list item)
+                var itemText = item.textContent.trim();
+                //console.log('Item text before change:', itemText); // Debug log
+
+                // Check if the item contains "Trinidad and Tobago"
+                if (itemText === "Trinidad and Tobago") {
+                    // Replace the full name with "T & T"
+                    item.innerHTML = item.innerHTML.replace("Trinidad and Tobago", "T & T");
+                    //console.log('Item text after change:', item.textContent.trim()); // Debug log
+                }
+            });
+        }
+
+        // Add an event listener to toggle text between "Trinidad and Tobago" and "T & T"
+        langItems.forEach(function(item) {
+            item.addEventListener('click', function() {
+                var itemText = item.textContent.trim();
+               // console.log('Item clicked. Current text:', itemText); // Debug log
+
+                // Toggle the item text when clicked
+                if (itemText === "Trinidad and Tobago") {
+                    item.innerHTML = item.innerHTML.replace("Trinidad and Tobago", "T & T");
+                   // console.log('Item text after click (T & T):', item.textContent.trim()); // Debug log
+                } else if (itemText === "T & T") {
+                    item.innerHTML = item.innerHTML.replace("T & T", "Trinidad and Tobago");
+                    //console.log('Item text after click (Trinidad and Tobago):', item.textContent.trim()); // Debug log
+                }
+            });
+        });
+    });
+    </script>
+    <script type="text/javascript" src="https://medicasapp.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://medicasapp.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="jquery-js-after">
+/* <![CDATA[ */
+jqueryParams.length&&$.each(jqueryParams,function(e,r){if("function"==typeof r){var n=String(r);n.replace("$","jQuery");var a=new Function("return "+n)();$(document).ready(a)}});
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://medicasapp.com/wp-content/themes/divi-child/js/nav-menu.js" id="nav-menu-js"></script>
+<script type="text/javascript" id="child-theme-custom-js-js-extra">
+/* <![CDATA[ */
+var my_ajax_object = {"ajax_url":"https:\/\/medicasapp.com\/wp-admin\/admin-ajax.php","nonce":"7cd6d7f700"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://medicasapp.com/wp-content/themes/divi-child/js/my_custom_js.js?ver=1760461460" id="child-theme-custom-js-js"></script>
+<script type="text/javascript" src="https://medicasapp.com/wp-content/themes/divi-child/js/owl.carousel.min.js?ver=1760461460" id="owl_carousel-js"></script>
+<script type="text/javascript" src="https://medicasapp.com/wp-content/themes/divi-child/js/script.js?ver=1760461460" id="script_js-js"></script>
+<script type="text/javascript" src="https://medicasapp.com/wp-content/themes/divi-child/js/bootstrap.min.js?ver=1760461460" id="bootstrap_min-js"></script>
+<script type="text/javascript" src="https://medicasapp.com/wp-content/themes/divi-child/js/nav-menu.js?ver=1760461460" id="nav_menu-js"></script>
+<script type="text/javascript" src="https://medicasapp.com/wp-content/themes/divi-child/js/jquery.magnific-popup.min.js?ver=1760461460" id="magnific_popup-js"></script>
+<script type="text/javascript" src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js?ver=1760461460" id="isotop-js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js?ver=1760461460" id="counterup-js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js?ver=1760461460" id="stellar-js"></script>
+<script type="text/javascript" id="main_js-js-extra">
+/* <![CDATA[ */
+var folderData = {"path":"https:\/\/medicasapp.com\/wp-content\/themes\/divi-child"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://medicasapp.com/wp-content/themes/divi-child/js/main.js?ver=1760461460" id="main_js-js"></script>
+<script type="text/javascript" id="divi-custom-script-js-extra">
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https:\/\/medicasapp.com\/wp-admin\/admin-ajax.php","images_uri":"https:\/\/medicasapp.com\/wp-content\/themes\/Divi\/images","builder_images_uri":"https:\/\/medicasapp.com\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"94a95713f4","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"e58bba2b63","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"27029","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":"https:\/\/medicasapp.com\/wp-content\/themes\/Divi\/includes\/builder\/frontend-builder\/assets\/vendors","accent_color":"#7EBEC5","waypoints_options":[]};
+var et_pb_box_shadow_elements = [];
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://medicasapp.com/wp-content/themes/Divi/js/scripts.min.js?ver=4.27.4" id="divi-custom-script-js"></script>
+<script type="text/javascript" src="https://medicasapp.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.fitvids.js?ver=4.27.4" id="fitvids-js"></script>
+<script type="text/javascript" id="et-builder-cpt-modules-wrapper-js-extra">
+/* <![CDATA[ */
+var et_modules_wrapper = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://medicasapp.com/wp-content/themes/Divi/includes/builder/scripts/cpt-modules-wrapper.js?ver=4.27.4" id="et-builder-cpt-modules-wrapper-js"></script>
+<script type="text/javascript" src="https://medicasapp.com/wp-content/themes/Divi/core/admin/js/common.js?ver=4.27.4" id="et-core-common-js"></script>
+<script type="text/javascript" src="https://medicasapp.com/wp-content/themes/Divi/js/custom.js?ver=1760461460" id="custom-js-js"></script>
+
+  <script>
+jQuery(document).ready(function($) {
+  var $loader = $('#loader');
+
+  // Show loader immediately when navigating away (including reloads)
+  window.addEventListener('beforeunload', function () {
+    $loader.fadeIn(200);
+  });
+
+  // Hide loader when page finishes loading
+  $(window).on('load', function() {
+    $loader.fadeOut(200);
+  });
+
+  // Also show loader on internal link clicks (optional, for smoother UX)
+$('body').on('click', 'a', function(e) {
+  setTimeout(function () {
+    const loader = document.getElementById('loader');
+    if (loader) {
+      loader.style.display = 'none';
+    } else {
+      console.log('Loader element not found');
+    }
+  }, 2000);
+  var link = $(this).attr('href');
+  if (
+    link &&
+    this.hostname === location.hostname &&
+    !$(this).attr('target') &&
+    link.indexOf('#') !== 0 &&
+    link.indexOf('javascript:') !== 0 &&
+    !link.startsWith('mailto:')
+  ) {
+    $loader.fadeIn(200);
+
+    // Fallback to hide loader after 3 seconds in case page doesn't change
+  }
+});
+
+
+  // Show loader on form submit
+  $('body').on('submit', 'form', function() {
+    $loader.fadeIn(200);
+  });
+});
+</script>
+
+<div>
+    <div>
+
+    <div id="popupContanier" class="_1yCVn _1qse9 hidepopup">
+      <div class="_2uc4w"><span id="closewhatApp" class="_lI8mw">
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 0 0 203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z">
+            </path>
+          </svg></span>
+        <div class="_3jDIS"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C6.486 2 2 6.486 2 12v4.143C2 17.167 2.897 18 4 18h1a1 1 0 0 0 1-1v-5.143a1 1 0 0 0-1-1h-.908C4.648 6.987 7.978 4 12 4s7.352 2.987 7.908 6.857H19a1 1 0 0 0-1 1V18c0 1.103-.897 2-2 2h-2v-1h-4v3h6c2.206 0 4-1.794 4-4 1.103 0 2-.833 2-1.857V12c0-5.514-4.486-10-10-10z">
+            </path>
+          </svg></div>
+        <div class="_3trGj"><span class="_3XZUa">Medicas</span><span class="_Muogh">Typically replies within
+            minutes</span></div>
+      </div>
+      <div class="_39IQj">
+        <div class="_1mXIm"><span class="_3Oyio"></span><span class="_3sxfE">Medicas</span>
+          <p class="_1iYf5">Hello! 👋🏼 What can we do for you?</p>
+          <span class="_3--Dl">5:04</span>
+        </div>
+      </div>
+      <div class="_3XP0H">
+
+        <input name="whtaptext" id="whtaptext" placeholder="Type a message" class="_siqLL" value="">
+        <button id="sendRequest" class="_3twZq">Send</button>
+      </div>
+    </div>
+
+    <div class="_2qp0Z" id="popupToggle">
+      <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z">
+        </path>
+      </svg>
+    </div>
+  </div>
+    <script>
+  $("#popupContanier").toggleClass("hidepopup");
+  jQuery('#closewhatApp').click(function () {
+        //$("#popupContanier").toggleClass("show");
+        $("#popupContanier").toggleClass("hidepopup");
+        return false;
+      });
+
+      jQuery('#popupToggle').click(function () {
+        //$("#popupContanier").toggleClass("show");
+        $("#popupContanier").toggleClass("hidepopup");
+        return false;
+      });
+  jQuery('#sendRequest').click(function () {
+        //$("#popupContanier").toggleClass("show");
+        var text = $("#whtaptext").val();
+                  if (text != "") {
+            var url = 'https://api.whatsapp.com/send/?phone=%2B919391804395&text=' + text + '&type=phone_number&app_absent=0';
+          } else {
+            var url = 'https://api.whatsapp.com/send/?phone=%2B919391804395&type=phone_number&app_absent=0';
+          }
+                window.open(url, '_blank');
+        $("#whtaptext").val('');
+        return false;
+      });
+  </script>
+  <style>
+    .hidepopup {
+      display: none !important;
+    }
+	
+
+    ._39IQj {
+      padding: 20px 20px 20px 20px;
+      background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+      background-size: cover;
+      position: relative;
+      overflow: auto;
+      max-height: 382px;
+    }
+
+    ._1mXIm {
+      padding: 7px 14px 6px;
+      background-color: rgb(255, 255, 255);
+      border-radius: 0px 8px 8px;
+      position: relative;
+      transition: all 0.3s ease 0s;
+      transform-origin: center top;
+      box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
+      margin-top: 4px;
+      max-width: calc(100% - 120px);
+    }
+
+    ._3sxfE {
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 18px;
+      color: rgba(0, 0, 0, 0.4);
+    }
+
+    ._1iYf5 {
+      font-size: 14px;
+      line-height: 19px;
+      margin-top: 4px;
+      color: rgb(17, 17, 17);
+      white-space: pre-wrap;
+    }
+
+    ._3Oyio {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 20px 20px 0;
+      border-color: transparent #ffffff transparent transparent;
+      position: absolute;
+      left: -10px;
+      top: 0;
+    }
+
+    ._3--Dl {
+      display: flex;
+      margin-top: 4px;
+      font-size: 12px;
+      line-height: 16px;
+      color: rgba(17, 17, 17, 0.5);
+      justify-content: flex-end;
+    }
+
+    ._2uc4w {
+      background-color: rgb(9, 94, 84);
+      display: flex;
+    }
+
+    ._lI8mw {
+      color: #f0ffffa1;
+      cursor: pointer;
+      font-size: 1.5em;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+
+    ._3jDIS {
+      align-items: center;
+      align-self: center;
+      background: #fff;
+      border-radius: 50%;
+      color: cadetblue;
+      display: flex;
+      font-size: 2em;
+      height: 45px;
+      margin: 5px;
+      justify-content: center;
+      padding: 10px;
+      width: 45px;
+    }
+
+    ._3trGj {
+      color: rgb(255, 255, 255);
+      margin-left: 16px;
+      margin-right: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    ._3XZUa {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 20px;
+      display: block;
+    }
+
+    ._Muogh {
+      font-size: 13px;
+      line-height: 18px;
+      margin-top: 4px;
+    }
+
+    ._3XP0H {
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+    }
+
+    ._siqLL {
+      border-radius: 20px;
+      padding: 12px 12px;
+      border: none;
+      margin-bottom: 10px;
+      background-color: #fefefe;
+    }
+
+    ._3twZq {
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: none;
+      background: rgb(79, 206, 93);
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 20px;
+      cursor: pointer;
+      margin: 0 20px;
+      box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 1px;
+    }
+
+    ._2qp0Z {
+      align-items: center;
+      align-self: flex-end;
+      background-color: rgb(255, 255, 255);
+      border-radius: 50%;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 12px;
+      color: rgb(79, 206, 93);
+      cursor: pointer;
+      display: flex;
+      font-size: 2em;
+      height: 64px;
+      justify-content: center;
+      outline: transparent;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      width: 64px;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      transition: 0.2s ease;
+
+    }
+
+    ._2qp0Z:hover {
+      background-color: #5ad167;
+    }
+
+    ._2qp0Z:hover svg {
+      fill: #fff;
+    }
+
+    /*
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+    @media (max-width: 480px) {
+      ._2qp0Z {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5em;
+      }
+    }
+
+    ._1yCVn {
+      width: 360px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 12px 24px 0px;
+      flex-direction: column;
+      border-radius: 15px;
+      overflow: hidden;
+      background-color: rgb(255, 255, 255);
+      transform: translate3d(0px, 0px, 0px);
+      touch-action: auto;
+      display: none;
+      position: fixed;
+      bottom: 110px;
+      right: 25px;
+    }
+
+    ._1qse9 {
+      display: flex;
+      -webkit-animation: _2-Apl 250ms ease-in-out both;
+      animation: _2-Apl 250ms ease-in-out both;
+    }
+
+    ._--3fm {
+      display: none;
+    }
+
+    @-webkit-keyframes _2-Apl {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes _2-Apl {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /*
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+    @media (max-width: 480px) {
+      ._1yCVn {
+        bottom: 85px;
+        width: 270px;
+      }
+    }
+  </style>
+
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+      "@graph": [
+      {
+        "@type": "Physician",
+        "name": "Dr B. L. Avinash",
+        "description": "Experienced General Practitioner offering online consultations via MedicasApp.",
+        "medicalSpecialty": "General-Practitioner",
+        "url": "https://medicasapp.com/in/doctors-in-bangalore/general-practitioner/dr-b-l-avinash/",
+        "image": "https://medicasapp.com/wp-content/themes/divi-child/img/doctor.png"      
+        
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://medicasapp.com/in/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Doctor List",
+            "item": "https://medicasapp.com/in/general-practitioner/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Dr B. L. Avinash",
+            "item": "https://medicasapp.com/in/doctors-in-bangalore/general-practitioner/dr-b-l-avinash/"
+          }
+        ]
+      }
+   
+    ]
+  }
+  </script></div></div>
+<script type="text/javascript" id="" charset="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","1027557617866290");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1027557617866290&amp;ev=PageView&amp;noscript=1"></noscript>
+<iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe><script type="text/javascript" id="" charset="">(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g+"?ref\x3dgtm2";d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","oqzpqq1czq");</script></body>
